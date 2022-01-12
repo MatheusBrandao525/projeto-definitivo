@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Josefin';
+    src: url("./fontes/JosefinSlab-VariableFont_wght.ttf") format("truetype");
+    font-family: 'Poppins';
+    src: url("./fonts/Poppins-ExtraLight.ttf") format("truetype")
+}
+
+
+.titulo{
+    font-size: 14px;
+}
+
+.tituloDetalhes{
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid rgb(138, 136, 136);
+    
+}
+
+.corpoDetalhes{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.w50{
+    width: 50%;
+    height: 100%;
+}
+
+.imgPrincipal{
+    width: 550px;
+    height: 400px;
+    padding: 10px 30px;
+}
+
+.sliderImg{
+    width: 550px;
+    height: 50px;
+    position: absolute;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.cardImg{
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.cardImg > img{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+}
+
+.botoesDetalhes{
+    width: 50%;
+    height: 60px;
+    display: block;
+}
+
+.botoesDetalhes > .comprar{
+    border: none;
+    height: 35px;
+    border-radius: 5px;
+    width: 500px;
+    background-color: #17a2b8;
+}
+
+.botoesDetalhes > .adicionar{
+    margin-top: 5px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    width: 500px;
+    background-color: #28a745;
+}
+
+.btn-danger{
+    cursor: default;
+}
+
+.adm{
+    height: 70vh;
+    text-align: center;
+}
+
+.painelDeControle{
+    width: 400px;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.botoesAdm{
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
