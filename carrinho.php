@@ -1,0 +1,6 @@
+<!--
+
+Criar a pagina de carrinho para que o usuario possa finalizar suas compras...
+Fazer validação para  que o usuario nao acesse esta pagina de maneiras indevidas...
+
+-->

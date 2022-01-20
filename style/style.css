@@ -101,3 +101,59 @@
     margin-bottom: 10px;
     text-decoration: none;
 }
+
+.cadastrarProduto{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloForm{
+    text-align: center;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 25px;
+}
+
+.bordaInferior{
+    border-bottom: 3px solid #17a2b8;
+}
+
+.formulario_produto{
+    display: inline-block;
+    width: 500px;
+    padding: 0 90px;
+}
+
+.label{
+    width: 100%;
+    font-size: 20px;
+}
+
+
+.input{
+    width: 300px;
+}
+
+.number{
+    width: 85px;
+}
+
+.formulario{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+
+.center >.tituloForm{
+    justify-content: center;
+}
+
+.btnCadastrar{
+    margin-right: 25px;
+}
+
+.btns{
+    display: flex;
+}
