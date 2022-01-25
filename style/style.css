@@ -157,3 +157,153 @@
 .btns{
     display: flex;
 }
+
+.btnVoltar{
+    margin-left: 15px;
+}
+
+.erros{
+    width: 100%;
+    height: 50px;
+}
+
+.voltar{
+    margin-top: 10px;
+}
+@media screen and (max-width:1200px) {
+    .corpoDetalhes{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    .imgPrincipal{
+        width: 100%;
+        height: 400px;
+        padding: 10px 2px;
+    }
+    .w50{
+        width: 50%;
+        height: 100%;
+    }
+    .voltar{
+        width: 100%;
+    }
+    .detales{
+        display: flex;
+        justify-content: center;
+    }
+    .centralizar{
+        display: inline-block;
+    }
+    .btn{
+        width: 350px;
+    }
+    .footer{
+        position: absolute;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .corpoDetalhes{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    .imgPrincipal{
+        width: 100%;
+        height: 400px;
+        padding: 10px 2px;
+    }
+    .w50{
+        width: 50%;
+        height: 100%;
+    }
+    .voltar{
+        width: 100%;
+    }
+    .detales{
+        display: flex;
+        justify-content: center;
+    }
+    .centralizar{
+        display: inline-block;
+    }
+    .btn{
+        width: 350px;
+    }
+    .footer{
+        position: absolute;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width:770px) {
+    .corpoDetalhes{
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .imgPrincipal{
+        width: 100%;
+        height: 400px;
+        padding: 10px 2px;
+    }
+    .w50{
+        width: 100%;
+        height: 100%;
+    }
+    .voltar{
+        width: 100%;
+    }
+    .detales{
+        display: flex;
+        justify-content: center;
+    }
+    .centralizar{
+        display: inline-block;
+    }
+    .btn{
+        width: 350px;
+    }
+    .footer{
+        position: absolute;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width:700px) {
+    .corpoDetalhes{
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .imgPrincipal{
+        width: 100%;
+        height: 400px;
+        padding: 10px 2px;
+    }
+    .w50{
+        width: 100%;
+        height: 100%;
+    }
+    .voltar{
+        width: 100%;
+    }
+    .detales{
+        display: flex;
+        justify-content: center;
+    }
+    .centralizar{
+        display: inline-block;
+    }
+    .btn{
+        width: 350px;
+    }
+    .footer{
+        position: absolute;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+}

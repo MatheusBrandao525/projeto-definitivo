@@ -24,19 +24,10 @@
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script src="jquery.mask.js"></script>
+	<script src="jquery.mask.js"></script>
 
     <title>Minha Loja</title>
-	
-<script>
-	
-$(document).ready(function(){
-    $("#cep").mask("00000-000");
-});
-	
-	
-</script>
-	
+
 </head>
 	
 	
@@ -52,7 +43,14 @@ $(document).ready(function(){
 	include 'slider.php';
 	
 ?>
-
+<script>
+	
+	$(document).ready(function(){
+		$(".cep").mask("00000-000");
+	});
+		
+		
+</script>
 	
 	<div class="container-fluid">
 	
@@ -107,7 +105,7 @@ $(document).ready(function(){
 				<div class="form-group">
 				
 						<label for="cep">CEP</label>
-						<input name="txtcep" type="text" class="form-control" required id="cep">
+						<input name="txtcep" type="text" class="form-control cep" required id="cep">
 				</div>
 				
 							

@@ -20,7 +20,7 @@
         <div class="row text-center">
         <?php  while($exibe = $consulta->fetch(PDO::FETCH_ASSOC)) { ?>
             <div class="col-sm-4" style="margin-bottom: 8px;">
-                <img src='imgem/<?php echo $exibe["imagen_produto"]; ?>.jpg' class="card-img-top img-responsive" style="width: 100%;">
+                <img src='imgem/<?php echo $exibe["imagen_produto"]; ?>' class="card-img-top img-responsive" style="width: 100%;">
                 <h3><b><?php echo mb_strimwidth($exibe['nome_produto'],0,25,'...'); ?></b></h3>
                 <span style="font-size: 20px; color: rgb(24, 24, 24); font-weight: bolder;">R$ <?php echo number_format($exibe['vl_produto'],2,',','.'); ?></span>
                 
