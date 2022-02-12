@@ -8,3 +8,6 @@ Dia 19/01/2022
   
 Dia 24/01/2022
   Pagina de Detalhes e Pagina para cadastrar novos produtos, totalmente prontas.
+
+Dia 11/02/2022
+  Pagina categorias e pagina menu terminadas.
