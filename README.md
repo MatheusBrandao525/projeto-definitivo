@@ -11,3 +11,4 @@ Dia 24/01/2022
 
 Dia 11/02/2022
   Pagina categorias e pagina menu terminadas.
+  Sistema de busca usando operador LIKE finalizado. 
