@@ -1,10 +1,101 @@
-@font-face {
-    font-family: 'Josefin';
-    src: url("./fontes/JosefinSlab-VariableFont_wght.ttf") format("truetype");
-    font-family: 'Poppins';
-    src: url("./fonts/Poppins-ExtraLight.ttf") format("truetype")
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
 
+.menudrop{
+    position: relative;
+}
+
+.divdrop{
+    position: absolute;
+    background-color:#343a40;
+    z-index: 999;
+    color: white;
+    display: none;
+}
+
+.linkdrop:hover .divdrop{
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    height: 80px;
+    width: 100%;
+    background-color:#343a40;
+    max-height: 80px;
+}
+
+label.logo{
+    font-size: 35px;
+    color: white;
+    padding: 0 75px;
+    line-height: 80px;
+    max-height: 80px;
+}
+
+nav ul{
+    float: right;
+    margin-bottom: 0;
+    margin-right: 40px;
+    /*max-height: 80px;*/
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+    max-height: 80px;
+}
+
+nav a{
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+    max-height: 80px;
+}
+
+a.claselinkS{
+    text-decoration:none;
+    max-height: 80px;
+    height: 100%;
+}
+
+.categoriaLink{
+    max-height: 70px;
+}
+
+nav #icon{
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.clear{
+    clear: both;
+}
+
+.direita{
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+}
 
 .titulo{
     font-size: 14px;
@@ -19,13 +110,14 @@
 
 .corpoDetalhes{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
 }
 
 .w50{
     width: 50%;
     height: 100%;
+    padding: 0 15px;
 }
 
 .imgPrincipal{
@@ -49,6 +141,10 @@
     background-color: gray;
     border-radius: 50%;
     margin: 0 10px;
+}
+
+.btndetalhes{
+    margin-bottom: 5px;
 }
 
 .cardImg > img{
@@ -92,7 +188,7 @@
 .painelDeControle{
     width: 400px;
     display: inline-block;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 .botoesAdm{
@@ -145,7 +241,6 @@
     margin-bottom: 15px;
 }
 
-
 .center >.tituloForm{
     justify-content: center;
 }
@@ -161,7 +256,19 @@
 .btnVoltar{
     margin-left: 15px;
 }
-
+.dadosCarrinho{
+    height: 140px;
+    display:flex;
+    margin: 20px;
+}
+.margin{
+    margin-left: 60px;
+    max-width: 450px;
+    height: 100px;
+}
+.margin h4{
+    line-height: 50px;
+}
 .erros{
     width: 100%;
     height: 50px;
@@ -170,7 +277,106 @@
 .voltar{
     margin-top: 10px;
 }
-@media screen and (max-width:1200px) {
+
+.olaadm{
+    margin-top: 20px;
+}
+.nomeAdm{
+    font-size: 20px;
+    font-weight: 700;
+}
+.tituloCart{
+    width: 100%;
+}
+.tituloCart h1{
+    width: 100vw;
+    text-align: center;
+}
+
+.img-responsiva{
+    width: 120px;
+    height: 120px;
+}
+
+.precoCart{
+    height: 100px;
+    width: 50px;
+}
+
+.precoCart h4{
+    line-height: 50px;
+}
+
+.quantidadeCart{
+    display: flex;
+    height: 100px;
+}
+
+.quantidadeCart h4{
+    line-height: 50px;
+    margin: 0 10px;
+}
+
+.quantidadeCart a{
+
+    margin-top: 10px;
+}
+
+.quantidadeCart button{
+    width: 40px;
+    height: 40px;
+}
+
+.removerbtn{
+    height: 150px;
+}
+
+.ajuste{
+    height: 50px;
+}
+
+.botoesCart{
+    display: flex;
+}
+.acaoCart{
+    width: 100vw;
+    text-align: center;
+}
+
+.linkdecoration{
+    text-decoration: none;
+    width: 100%;
+}
+
+.exibebusca{
+    height: 100%;
+}
+
+.footer{
+    background-color: #2c2c2c; 
+    margin-top: 40px; 
+    padding-top: 50px; 
+    min-height: 400px;
+    color: aliceblue;
+}
+
+@media screen and (max-width:1400px) {
+    .dropdown-menu{
+        margin-top: -7px;
+    }
+    .formularioPesquisa{
+        width: 100%;
+        display: flex;
+
+    }
+    .botaoProcurar{
+        max-width: 150px;
+    }
+    .form-inline{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
     .corpoDetalhes{
         width: 100%;
         height: 100%;
@@ -193,18 +399,32 @@
         justify-content: center;
     }
     .centralizar{
+        width: 100%;
         display: inline-block;
     }
-    .btn{
-        width: 350px;
-    }
-    .footer{
-        position: absolute;
-        width: 100%;
-        margin-top: 20px;
-    }
+
 }
 @media screen and (max-width:1024px) {
+    label.logo{
+        font-size: 32px;
+        padding-left: 60px;
+    }
+    nav ul{
+        margin-right: 20px;
+    }
+    nav a{
+        font-size: 17px;
+    }
+    .formularioPesquisa{
+        width: 100%;
+        display: flex;
+
+    }
+    .form-inline{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
     .corpoDetalhes{
         width: 100%;
         height: 100%;
@@ -229,15 +449,66 @@
     .centralizar{
         display: inline-block;
     }
-    .btn{
-        width: 350px;
-    }
-    .footer{
-        position: absolute;
-        width: 100%;
-        margin-top: 20px;
-    }
+
 }
+@media screen and (max-width:940px) {
+    nav #icon{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #343a40;
+        top: 80px;
+        left: -100%;
+        transition: all .5s;
+        text-align: center;
+        z-index: 99;
+    }
+    nav li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav a{
+        font-size: 20px;
+    }
+    a.active,a:hover{
+        border: none;
+        color: #3498db;
+    }
+    nav ul.show{
+        left: 0;
+    }
+    .dropdown-menu{
+        margin-top: 0;
+        width: 100%;
+        background-color: #343a40;
+        text-align: center;
+        border: none;
+    }
+    .dropdown-item{
+        color: white;
+    }
+    .manterbotoes{
+        align-items: center;
+        text-align: center;
+    }
+
+    .formularioPesquisa{
+        width: 100%;
+        display: flex;
+
+    }
+    .form-inline{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
 @media screen and (max-width:770px) {
     .corpoDetalhes{
         width: 100%;
@@ -263,14 +534,7 @@
     .centralizar{
         display: inline-block;
     }
-    .btn{
-        width: 350px;
-    }
-    .footer{
-        position: absolute;
-        width: 100%;
-        margin-top: 20px;
-    }
+
 }
 @media screen and (max-width:700px) {
     .corpoDetalhes{
@@ -297,13 +561,15 @@
     .centralizar{
         display: inline-block;
     }
-    .btn{
-        width: 350px;
-    }
-    .footer{
-        position: absolute;
-        width: 100%;
-        margin-top: 20px;
-    }
 
+}
+
+@media screen and (max-width:610px) {
+    .botaoProcurar{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .botoesCart{
+        display: inline-block;
+    }
 }

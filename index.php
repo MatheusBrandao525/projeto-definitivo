@@ -3,14 +3,20 @@
     
         include 'cabecalho.html';
         include 'conexao.php';
-        include 'menu.php';
-        include 'menu_2.php';
-        include 'slider.php';
 
         $consulta = $cn->query('select nome_produto, id_produto, imagen_produto, descricao, qnt_estoque, vl_produto  from vw_produtos');
        
     ?>
 <body>
+
+<?php 
+
+    //include 'menu.php';
+    include 'menu.php';
+    include 'menu_2.php';
+    include 'slider.php';
+
+?>
 
 <style>
     *{
@@ -30,7 +36,7 @@
                 <a href="detalhes.php?id=<?php echo $exibe['id_produto']; ?>" style="text-decoration:none;">
                     <button type="button" class="btn btn-info btn-block" style="margin-bottom: 5px;">Detalhes</button>
                 </a>
-
+                <div class="manterbotoes">
                 <?php if(empty($_SESSION['ID'])) { ?>
                     <?php if($exibe['qnt_estoque'] > 0) {?>
                         <a href="login.php" style="text-decoration:none;">
@@ -43,7 +49,7 @@
                     <?php } ?>
                 <?php }else { ?>
                     <?php if($exibe['qnt_estoque'] > 0) {?>
-                        <a href="carrinho.php" style="text-decoration:none;">
+                        <a href="carrinho.php?id=<?php echo $exibe['id_produto']; ?>" style="text-decoration:none;">
                             <button type="button" class="btn btn-success btn-block">Adicionar ao Carrinho</button>
                         </a>
                     <?php } else { ?>
@@ -52,6 +58,8 @@
                         </a>
                     <?php } ?>
                 <?php } ?>
+                </div>
+                
             </div><!--col-sm-4-->
         <?php } ?>
 

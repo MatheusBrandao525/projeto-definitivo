@@ -5,9 +5,9 @@
         include 'menu.php';
         include 'menu_2.php';
 
-        $cd_produto = $_GET['id'];
+        $id_produto = $_GET['id'];
         
-        $consulta = $cn->query("select nome_produto,nome_categoria, imagen_produto, descricao, qnt_estoque, vl_produto from vw_produtos where id_produto= '$cd_produto' ");
+        $consulta = $cn->query("select * from vw_produtos where id_produto= '$id_produto' ");
     ?>
 <body>
         <div class="container tituloDetalhes">
@@ -40,24 +40,22 @@
 
             <?php if(empty($_SESSION['ID'])) { ?>
                     <?php if($exibe['qnt_estoque'] > 0) {?>
-                        <a href="login.php" style="text-decoration:none;">
+                        <a class="linkdecoration" href="login.php">
                             <button type="button" class="btn btn-success btn-block">Adicionar ao Carrinho</button>
                         </a>
                         <a href="index.php" class="btn btn-danger btn-block voltar">Voltar</a>
                     <?php } else { ?>
-                        <a href="" style="text-decoration:none;">
+                        <a class="linkdecoration" href="">
                             <button type="button" class="btn btn-danger btn-block" disabled >Produto indisponivel</button>
                         </a>
                         <a href="index.php" class="btn btn-danger btn-block voltar">Voltar</a>
                     <?php } ?>
                 <?php }else { ?>
                     <?php if($exibe['qnt_estoque'] > 0) {?>
-                        <a href="carrinho.php" style="text-decoration:none;">
-                            <button type="button" class="btn btn-success btn-block">Adicionar ao Carrinho</button>
-                        </a>
+                        <a class="btn btn-success btn-block linkdecoration" href='carrinho.php?id=<?php echo $exibe["id_produto"];?>'>Adicionar ao Carrinho</a>
                         <a href="index.php" class="btn btn-danger btn-block voltar">Voltar</a>
                     <?php } else { ?>
-                        <a href="" style="text-decoration:none;">
+                        <a class="linkdecoration" href="">
                             <button type="button" class="btn btn-danger btn-block" disabled >Produto indisponivel</button>
                         </a>
                         <a href="index.php" class="btn btn-danger btn-block voltar">Voltar</a>

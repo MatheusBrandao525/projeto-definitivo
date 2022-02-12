@@ -1,26 +1,33 @@
 <?php 
+    
+    // Incluindo a Conexão com banco de dados...
+    include 'conexao.php';
 
-include 'conexao.php';
+    // Variaveis que recebens os valores do formulario de cadastro de clientes via netodo POST...
+    $nome = $_POST['txtnome']; // Recebe nome do cliente...
+    $sobrenome = $_POST['txtsobrenome']; // Recebe sobrenome do cliente...
+    $email = $_POST['txtemail']; // Recebe o E-Mail do cliente...
+    $senha = $_POST['txtsenha']; // Recebe a senha criada pelo cliente...
+    $endereco = $_POST['txtendereco']; // Recebe o endereço do cliente...
+    $cidade = $_POST['txtcidade']; // Recebe o nome da cidade do cliente...
+    $nocep = $_POST['txtcep']; // Recebe o numero de CEP da cidade ande o cliente reside...
 
-$nome = $_POST['txtnome'];
-$sobrenome = $_POST['txtsobrenome'];
-$email = $_POST['txtemail'];
-$senha = $_POST['txtsenha'];
-$endereco = $_POST['txtendereco'];
-$cidade = $_POST['txtcidade'];
-$nocep = $_POST['txtcep'];
+    // Consultando se o email informado pelo o cliente ja existe ou nao no banco de dados...
+    // A variavel $consulta esta recebe o valor da variael de conexão $cn
+    // que está consultando se no banco de dados na tabela usuario existe algum email que seja igual ao recebido pela variavel $email...
+    $consulta = $cn->query("select ds_email from tbl_usuario where ds_email = '$email'");
+    $exibe = $consulta ->fetch(PDO::FETCH_ASSOC);
 
 
-$consulta = $cn->query("select ds_email from tbl_usuario where ds_email = '$email'");
-$exibe = $consulta ->fetch(PDO::FETCH_ASSOC);
+    if($consulta->rowCount() == 1) {
+        // Se o email existir no banco de dados entao manda o usuario para a pagina de erro.php...
+        header('location:erro1.php');
+    } else{
+        // Caso contrario insira na tabela usuario todos os dados preenchidos pelo usuario no formulario de cadastro e o redirecione para a pagina de login...
+        $incluir = $cn->query("
+        insert into tbl_usuario(nome_usuario,sobrenome,ds_email,ds_senha,ds_status,ds_endereco,ds_cidade,no_cep)
+        values('$nome','$sobrenome','$email','$senha','0','$endereco','$cidade','$nocep')");
+        header('location:login.php');
 
-if($consulta->rowCount() == 1) {
-    header('location:erro1.php');
-} else{
-    $incluir = $cn->query("
-    insert into tbl_usuario(nome_usuario,sobrenome,ds_email,ds_senha,ds_status,ds_endereco,ds_cidade,no_cep)
-    values('$nome','$sobrenome','$email','$senha','0','$endereco','$cidade','$nocep')");
-    header('location:ok.php');
-
-}
+    }
 ?>

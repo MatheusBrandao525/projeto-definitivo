@@ -1,57 +1,44 @@
 <?php
-    include 'conexao.php';
-    include 'cabecalho.html';
 
-
+    include "conexao.php"; // incluindo arquivo de conexão.
 
 ?>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a href="#" class="nav-brand " style="margin:0 1%;">
-        <img src="imagens/logo - Copia.png" alt="" style="width: 40px;">
-    </a>
+        <nav>
+            <label class="logo">Minha Loja</label>
+            <ul>
+                <li><a class="claselinkS" href="index.php">Home</a></li> <!--Link que redireciona para o Home-->
+                <li><a class="claselinkS"  href="#produtos">Produtos</a></li> <!--Link que redireciona para os produtos usando scroll-havior.-->
+                <li class="nav-item dropdown"> <!--Menu dropdown para as categorias-->
+                    <a href="#" class="nav-link dropdown-toggle categoriaLink" id="categorias" data-toggle="dropdown">
+                        Categorias
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="categorias.php?cat=Masculino" class="dropdown-item">Masculino</a>
+                        <a href="categorias.php?cat=Feminino" class="dropdown-item">Feminino</a>
+                        <a href="categorias.php?cat=Calçados" class="dropdown-item">Calçados</a>
+                        <a href="categorias.php?cat=Relojoaria" class="dropdown-item">Relojoaria</a>
+                        <a href="categorias.php?cat=Joalheria" class="dropdown-item">Joalheria</a>
+                    </div>
+                </li>
+                <li><a class="claselinkS"  href="contato.php">Contato</a></li>
+                <li><a class="claselinkS"  href="supote.php">Suporte</a></li>
+            </ul>   
 
+            <label id="icon">
+                <i class="fas fa-bars"></i> <!--Icone de menu hamburguer-->
+            </label>
+            <div class="clear"></div> <!--Usando uma dive para limpar a flutuação dos elementos usando clear-both.-->
 
-    <div class="navbar-header">
-			<button type="button" class="navbar-toggler bg-dark" data-toggle="collapse" data-target="#links-menu" style="margin-bottom: 15px;">
-					<i class="material-icons">menu</i>
-			</button>
-	</div>
+            <script>
+                // Script js para fazer com que o dropdown funcione corretamente.
+            $(document).ready(function(){
+                // selecionando no documento o elemento cujo o id seja "categorias" e aplicando uma função ao clicar nesse elemento.
+                $('#categorias').click(function(){
+                    // Ao clicar no elemento cujo id é "categorias" entao exibe o elemento cuja classe é "dropdown-menu."  
+                    $('.dropdown-menu').toggleClass('show')
+                });
+            });
 
-    <nav id="links-menu" class="collapse navbar-collapse text-center">
-        <ul class="navbar-nav">
-
-            <li class="nav-item">
-                <a href="index.php" class="nav-link">Home</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#produtos" class="nav-link">Produtos</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#" class="nav-link">Sobre</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#" class="nav-link">Contato</a>
-            </li>
-
-
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" id="categorias" data-toggle="dropdown">
-                    Categorias
-                </a>
-                <div class="dropdown-menu">
-                    <a href="categorias.php?cat=Masculino" class="dropdown-item">Masculino</a>
-                    <a href="categorias.php?cat=Feminino" class="dropdown-item">Feminino</a>
-                    <a href="categorias.php?cat=Calçados" class="dropdown-item">Calçados</a>
-                    <a href="categorias.php?cat=Relojoaria" class="dropdown-item">Relojoaria</a>
-                    <a href="categorias.php?cat=Joalheria" class="dropdown-item">Joalheria</a>
-                </div>
-            </li>
-
-        </ul>
-    </nav>
-</nav><!--Nav-principal-do-menu-->
-
+            </script>   
+        </nav>

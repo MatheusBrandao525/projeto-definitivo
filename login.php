@@ -2,7 +2,6 @@
     include 'cabecalho.html';
     include 'conexao.php';
     include 'menu.php';
-    include 'slider.php';
 ?>
 
 
