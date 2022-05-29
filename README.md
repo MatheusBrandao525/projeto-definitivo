@@ -12,3 +12,9 @@ Dia 24/01/2022
 Dia 11/02/2022
   Pagina categorias e pagina menu terminadas.
   Sistema de busca usando operador LIKE finalizado. 
+  
+Dia 29/05/22
+  Corrigido os erros presentes no carrinho de compras.
+  Adicionados novos arquivos ao projeto.
+  Sistema de alteração e exclusão de produtos finalizado.
+  Modificação dos menus do projeto.
