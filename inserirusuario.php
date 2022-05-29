@@ -1,4 +1,5 @@
 <?php 
+session_start();
     
     // Incluindo a Conexão com banco de dados...
     include 'conexao.php';
@@ -21,7 +22,7 @@
 
     if($consulta->rowCount() == 1) {
         // Se o email existir no banco de dados entao manda o usuario para a pagina de erro.php...
-        header('location:erro1.php');
+        header('location:erro_usuario.php');
     } else{
         // Caso contrario insira na tabela usuario todos os dados preenchidos pelo usuario no formulario de cadastro e o redirecione para a pagina de login...
         $incluir = $cn->query("

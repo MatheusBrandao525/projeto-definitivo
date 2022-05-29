@@ -63,9 +63,9 @@ Fazer validação para  que o usuario nao acesse esta pagina de maneiras indevid
         </div>
     </div>
 </main>
+
 <?php 
 
 include 'footer.php'
 
 ?>
-</body>

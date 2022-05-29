@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+.limpa{
+    clear: both;
+}
+
 .menudrop{
     position: relative;
 }
@@ -27,7 +31,7 @@ a{
     text-decoration: none;
 }
 
-nav{
+nav,#menu-principal, #menu-top{
     height: 80px;
     width: 100%;
     background-color:#343a40;
@@ -35,17 +39,25 @@ nav{
 }
 
 label.logo{
+    position: relative;
+    float: left;
+    top: 15px;
+    left: 20px;
     font-size: 35px;
     color: white;
-    padding: 0 75px;
-    line-height: 80px;
     max-height: 80px;
+}
+
+#menu-principal{
+    display: flex;
+    justify-content: center;
 }
 
 nav ul{
     float: right;
-    margin-bottom: 0;
-    margin-right: 40px;
+    top: 10px;
+    right: 20px;
+    margin: 0!important;
     /*max-height: 80px;*/
 }
 
@@ -90,11 +102,41 @@ nav #icon{
     clear: both;
 }
 
-.direita{
-    width: 100%;
-    height: 100%;
+.alinarNaMesmaLinha{
     display: flex;
+}
 
+.controls{
+    width: 550px;
+    float: right;
+    height: auto;
+    margin-top: 20px;
+
+}
+
+.iconesMenuTop{
+    display: flex;
+    color: white;
+}
+
+.iconesMenuTop span{
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.iconesMenuTop a{
+    display: flex;    
+}
+
+.alinharAdireita{
+    width: 100%;
+    float: right;
+    display: flex;
+    justify-content: space-around;
+}
+
+#inputpesquisar{
+    width: 380px;
 }
 
 .titulo{
@@ -126,6 +168,26 @@ nav #icon{
     padding: 10px 30px;
 }
 
+.pesquisar{
+    width: 100%;
+    padding: 10px 0 10px 0;
+    position: relative;
+    float: left;
+    margin: 0 !important;
+}
+
+.formularioPqs{
+    display: flex;
+    justify-content: center;
+}
+
+.slider{
+    background-color: slategray; 
+    height: auto; 
+    padding-top: 15px;
+    padding-bottom: 4px;
+}
+
 .sliderImg{
     width: 550px;
     height: 50px;
@@ -151,6 +213,15 @@ nav #icon{
     width: 100%;
     height: 100%;
     background-size: contain;
+}
+
+.tituloProduto{
+    height: 50px;
+    font-size: 1rem;
+}
+
+.btn{
+    font-size: 0.85rem !important;
 }
 
 .botoesDetalhes{
@@ -285,6 +356,12 @@ nav #icon{
     font-size: 20px;
     font-weight: 700;
 }
+
+.containnerCart{
+    height: 350px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 .tituloCart{
     width: 100%;
 }
@@ -352,6 +429,42 @@ nav #icon{
     height: 100%;
 }
 
+.centro{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.centro a>button{
+    margin-top: 20px;
+    width: 150px;
+}
+
+.disflex{
+    width: 350px !important;
+    display: flex;
+}
+
+.disflex> a{
+    width: 150px;
+    margin-left: 10px;
+}
+
+.erroUsuario{
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.erroLogin{
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .footer{
     background-color: #2c2c2c; 
     margin-top: 40px; 
@@ -365,9 +478,7 @@ nav #icon{
         margin-top: -7px;
     }
     .formularioPesquisa{
-        width: 100%;
         display: flex;
-
     }
     .botaoProcurar{
         max-width: 150px;

@@ -9,6 +9,7 @@
     // Incluindo arquivos importantes...
     include 'cabecalho.html';
     include 'conexao.php';
+    include 'menu.php';
 
     //Criar um menu que exibe "Bem vindo [Nome do ADM]!"
     $consulta = $cn->query('select * from tbl_usuario');
@@ -26,7 +27,7 @@
             <a href="cadastroProdutos.php"><!--Criar um formulario para casdastrar produtos-->
                 <button class="btn btn-lg btn-primary botoesAdm">Cadastrar Produtos <i class="fas fa-plus"></i></button>
             </a>
-            <a href="alterarProdutos.php"><!--Criar um formulario para alterar produtos-->
+            <a href="listarProdutoAlt.php"><!--Criar um formulario para alterar produtos-->
                 <button class="btn btn-lg btn-info botoesAdm">Alterar Produtos <i class="fas fa-edit"></i></button>
             </a>
             <a href="excluiProdutos.php"><!--Criar uma pagina para buscar e excluir produtos-->

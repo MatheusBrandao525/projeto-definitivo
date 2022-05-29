@@ -1,6 +1,14 @@
+<?php
+
+        if(!isset($_SESSION['carrinho'])){
+            // Então será criada uma sessão carrinho para receber um vetor...
+            $_SESSION['carrinho'] = array();
+        }
 
 
-<div class="container-fluid">
+?>
+
+<div class="container-fluid containnerCart">
 	
 	<div class="row text-center tituloCart" style="margin-top: 15px;">
 		<h1>Carrinho de Compras</h1>
@@ -8,9 +16,9 @@
 	
     <?php
 
-    include 'cabecalho.html';
+  /*   include 'cabecalho.html'; */
 
-    $total = null; // variavel total que recebe valor nulo
+    $total = 0; // variavel total que recebe valor nulo
 
     // criando um loop para sessão carrinho recebe o $cd e a quantidade
     foreach($_SESSION['carrinho'] as $id => $quantidade)  {
@@ -25,9 +33,7 @@
     ?>
 
 	<div class="row dadosCarrinho" style="margin-top: 15px;">
-		
-		
-		
+			
 		<div class="col-sm-1 col-sm-offset-1">
 			<img src="imgem/<?php echo $exibe['imagen_produto']; ?>" class="img-responsiva">
 		</div>
@@ -62,21 +68,7 @@
 		</div> 
 		
 	</div>	
-	<script>
-
-
-		function diminuicart(){
-			//event.preventDefault();
-			alert('diminui');
-			return;
-		}
-
-		function aumentacart(){
-			//event.preventDefault();
-			alert('amenta');
-			return;
-		}
-    </script>
+	</div>
 </div>
 	
 	<?php } ?>

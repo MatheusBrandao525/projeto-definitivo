@@ -25,6 +25,12 @@
             $consulta= $cn->query('select nome_usuario, ds_email, ds_status, ds_endereco from  tbl_usuario');
             $exibe = $consulta->fetch(PDO::FETCH_ASSOC);
     ?>
+
+        <h4>
+            <a href="alterar_dados.php">
+            <button class="btn btn-sm btn-danger">Aterar dados</button>
+            </a>
+        </h4>
         <h4>
             <a href="index.php">
             <button class="btn btn-sm btn-danger">voltar</button>

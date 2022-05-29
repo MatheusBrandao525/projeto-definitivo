@@ -1,44 +1,63 @@
 <?php
 
     include "conexao.php"; // incluindo arquivo de conexão.
-
 ?>
+<nav id="menu-top">
+<label class="logo">Minha Loja</label>
 
-        <nav>
-            <label class="logo">Minha Loja</label>
-            <ul>
-                <li><a class="claselinkS" href="index.php">Home</a></li> <!--Link que redireciona para o Home-->
-                <li><a class="claselinkS"  href="#produtos">Produtos</a></li> <!--Link que redireciona para os produtos usando scroll-havior.-->
-                <li class="nav-item dropdown"> <!--Menu dropdown para as categorias-->
-                    <a href="#" class="nav-link dropdown-toggle categoriaLink" id="categorias" data-toggle="dropdown">
-                        Categorias
+    <div class="controls">
+                <div class="alinharAdireita">
+            <?php if(empty($_SESSION['ID'])) { ?>
+                <div class="perfil iconesMenuTop">
+                        <a href="login.php" class="nav-link">
+                            <i class="material-icons">manage_accounts</i>
+                            <span>Perfil</span>
+                        </a>
+                </div><!--perfil-->
+            <?php } else{
+                    $consulta_usuario = $cn->query("select nome_usuario, ds_status from tbl_usuario where id_usuario = '$_SESSION[ID]'");
+                    $exibeUsuario = $consulta_usuario->fetch(PDO::FETCH_ASSOC);
+                ?>
+                        <div class="perfil iconesMenuTop">
+                            <a href="config_conta.php" class="nav-link">
+                                <i class="material-icons">manage_accounts</i>
+                                <span> <?php echo $exibeUsuario['nome_usuario'];?></span>
+                            </a>
+                    </div><!--perfil-->
+                <?php } ?>
+
+
+            
+            <div class="carrinho iconesMenuTop">
+                    <a href="carrinho.php" class="nav-link">
+                        <i class="material-icons"> shopping_cart</i>
+                        <span>Carrinho</span>
                     </a>
-                    <div class="dropdown-menu">
-                        <a href="categorias.php?cat=Masculino" class="dropdown-item">Masculino</a>
-                        <a href="categorias.php?cat=Feminino" class="dropdown-item">Feminino</a>
-                        <a href="categorias.php?cat=Calçados" class="dropdown-item">Calçados</a>
-                        <a href="categorias.php?cat=Relojoaria" class="dropdown-item">Relojoaria</a>
-                        <a href="categorias.php?cat=Joalheria" class="dropdown-item">Joalheria</a>
-                    </div>
-                </li>
-                <li><a class="claselinkS"  href="contato.php">Contato</a></li>
-                <li><a class="claselinkS"  href="supote.php">Suporte</a></li>
-            </ul>   
+            </div><!--carrinho-->
 
-            <label id="icon">
-                <i class="fas fa-bars"></i> <!--Icone de menu hamburguer-->
-            </label>
-            <div class="clear"></div> <!--Usando uma dive para limpar a flutuação dos elementos usando clear-both.-->
+            <?php if(empty($_SESSION['ID'])) { ?>
 
-            <script>
-                // Script js para fazer com que o dropdown funcione corretamente.
-            $(document).ready(function(){
-                // selecionando no documento o elemento cujo o id seja "categorias" e aplicando uma função ao clicar nesse elemento.
-                $('#categorias').click(function(){
-                    // Ao clicar no elemento cujo id é "categorias" entao exibe o elemento cuja classe é "dropdown-menu."  
-                    $('.dropdown-menu').toggleClass('show')
-                });
-            });
+                <div class="entrar iconesMenuTop">
+                    <a href="login.php" class="nav-link">
+                        <i class="material-icons"> login</i>
+                        <span>Entrar</span>
+                    </a>
+            </div><!--entrar-->
 
-            </script>   
-        </nav>
+            <?php }else{ 
+                $consulta_usuario = $cn->query("select nome_usuario from tbl_usuario where id_usuario = '$_SESSION[ID]'");
+                $exibeUsuario = $consulta_usuario->fetch(PDO::FETCH_ASSOC);
+                ?>
+
+                <div class="sair iconesMenuTop">
+                    <a href="sair.php" class="nav-link">
+                        <i class="material-icons"> logout</i>
+                        <span>Sair</span>
+                    </a>
+            </div><!--sair-->
+            <?php } ?>
+            </div>
+            
+        </div>
+        <div class="limpa"></div>
+</nav>
