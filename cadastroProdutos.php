@@ -11,8 +11,8 @@ if(empty($_SESSION['Status']) || $_SESSION['Status'] != 1) {
     header('location:index.php');
 }
 
-include 'cabecalho.html';
 include 'conexao.php';
+include 'menu.php';
 
 
 $consultaCat = $cn->query("select * from tbl_categoria");

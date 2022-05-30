@@ -26,7 +26,6 @@
 	session_start();
 	
 	include 'conexao.php';
-	include 'cabecalho.html';
 	include 'menu.php';
 	include	'menu_2.php';
 	

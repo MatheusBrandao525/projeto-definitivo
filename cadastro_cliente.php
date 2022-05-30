@@ -15,7 +15,6 @@ session_start();
 	include 'conexao.php';	
 	include 'menu.php';
 	include 'slider.php';
-	include 'cabecalho.html';
 	
 ?>
 

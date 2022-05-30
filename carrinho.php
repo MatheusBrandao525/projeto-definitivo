@@ -14,7 +14,6 @@ Fazer validação para  que o usuario nao acesse esta pagina de maneiras indevid
     }
 
     include 'conexao.php';
-    //include 'cabecalho.html';
     include 'menu.php';
 
     // Verificando se o id do produto está setado...

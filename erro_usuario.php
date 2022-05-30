@@ -1,6 +1,5 @@
 <?php 
 
-    include 'cabecalho.html';
     include 'menu.php';
     include 'menu-principal.php';
 ?>

@@ -1,7 +1,6 @@
 <?php
 
     include 'conexao.php';
-    include 'cabecalho.html';
     include 'menu.php';
 
 

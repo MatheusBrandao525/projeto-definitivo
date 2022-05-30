@@ -444,6 +444,19 @@ nav #icon{
     display: flex;
 }
 
+.centraliza{
+    width: 100%;
+    display: flex;
+    justify-items: center;
+}
+
+.rowuser{
+    width: 100%;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .disflex> a{
     width: 150px;
     margin-left: 10px;

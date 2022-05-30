@@ -1,6 +1,5 @@
 <?php
     session_start(); // iniciando a sessão.
-    include 'cabecalho.html'; // incluindo um head, com todos os links necessarios para a pagina funcionar.
     include 'conexao.php'; // incluindo o arquivo de conexão com o banco de dados.
     include 'menu.php'; // incluindo um menu.
     include 'menu_2.php'; // incluindo o segundo menu.

@@ -1,8 +1,13 @@
 <?php
     session_start();
     
-        include 'cabecalho.html';
+
         include 'conexao.php';
+            //include 'menu.php';
+        include 'menu.php';
+        include 'menu_2.php';
+        include 'slider.php';
+        include 'menu-principal.php';
 
         $consulta = $cn->query('select nome_produto, id_produto, imagen_produto, descricao, qnt_estoque, vl_produto  from vw_produtos');
        
@@ -11,11 +16,7 @@
 
 <?php 
 
-    //include 'menu.php';
-    include 'menu.php';
-    include 'menu_2.php';
-    include 'slider.php';
-    include 'menu-principal.php';
+
 
 ?>
 

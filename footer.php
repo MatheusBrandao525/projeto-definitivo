@@ -1,5 +1,4 @@
 <?php 
-include 'cabecalho.html';
 include 'conexao.php';
 ?>
 

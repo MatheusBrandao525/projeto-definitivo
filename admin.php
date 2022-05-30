@@ -7,7 +7,6 @@
     }
 
     // Incluindo arquivos importantes...
-    include 'cabecalho.html';
     include 'conexao.php';
     include 'menu.php';
 

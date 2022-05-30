@@ -8,7 +8,6 @@ if(empty($_SESSION['Status']) || $_SESSION['Status'] != 1) {
 
 
 include 'conexao.php';
-include 'cabecalho.html';
 include 'menu.php';
 
 $consulta = $cn->query('select * from tbl_produto');

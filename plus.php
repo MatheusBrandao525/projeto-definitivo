@@ -9,7 +9,6 @@
 
 	
 	include 'conexao.php';
-	//include 'nav.php';
 	
 	$consulta = $cn->query("SELECT * FROM tbl_produto WHERE id_produto = '$id_produto' ");
 	$exibe = $consulta->fetch(PDO::FETCH_ASSOC);
