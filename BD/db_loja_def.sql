@@ -26,6 +26,8 @@ constraint fk_cat foreign key(id_categoria) references tbl_categoria(id_categori
 )
 default charset utf8;
 
+select * from tbl_produto;
+
 update tbl_produto
 set imagen_produto = 'camisa_social.jpg'
 where id_produto = 8;
@@ -74,6 +76,18 @@ ds_endereco varchar (80) not null,
 ds_cidade varchar (24) not null,
 no_cep char(9) not null
 ) default charset utf8;
+
+create table tbl_venda(
+id_venda int(11) primary key auto_increment,
+no_ticket varchar(13) not null,
+id_usuario int(11) not null,
+id_produto int(11) not null,
+qnt_produto int(11) not null,
+vlr_produto decimal(10,2) not null,
+vlr_total_produto decimal(10,2) generated always as ((qnt_produto * vlr_produto)) virtual,
+dt_venda date not null
+) default charset=utf8;
+
 
 insert into tbl_usuario
 values(default,'Matheus Felipe', 'Brandão','mathesus@gmail.com', 'exagon10',0, 'Br 429 km 91','Sao Francisco do Guapore','76935-000');

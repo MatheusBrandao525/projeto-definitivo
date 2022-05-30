@@ -48,7 +48,7 @@ Fazer validação para  que o usuario nao acesse esta pagina de maneiras indevid
     }
 
 ?> 
-<body>
+
 <main>
 	<!-- exibindo o valor da variavel total da compra -->
 	<div class="row tituloCart" style="margin-top: 15px;">
@@ -59,7 +59,10 @@ Fazer validação para  que o usuario nao acesse esta pagina de maneiras indevid
     <div class="botoesCart">
         <div class="acaoCart">
                 <a href="index.php" class="btn btn-primary" style="margin:8px;">Continuar comprando</a>
-                <a href="#" class="btn btn-success">Finalizar compra</a>
+
+                <?php if(count($_SESSION['carrinho'])>0){ ?>
+                    <a href="finalizarCompra.php" class="btn btn-success">Finalizar compra</a>
+                <?php } ?>
         </div>
     </div>
 </main>
