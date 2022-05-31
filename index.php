@@ -35,7 +35,7 @@
             <div class="col-sm-2" style="margin-bottom: 8px;">
 
                 <img src='imgem/<?php echo $exibe["imagen_produto"]; ?>' class="card-img-top img-responsive" style="width: 100%;">
-                <h5 class="tituloProduto"><b><?php echo mb_strimwidth($exibe['nome_produto'],0,25,'...'); ?></b></h5>
+                <h5 class="tituloProduto"><strong><b><?php echo mb_strimwidth($exibe['nome_produto'],0,25,'...'); ?></b></strong></h5>
                 <span style="font-size: 20px; color: rgb(24, 24, 24); font-weight: bolder;">R$ <?php echo number_format($exibe['vl_produto'],2,',','.'); ?></span>
                 
                 <a href="detalhes.php?id=<?php echo $exibe['id_produto']; ?>" style="text-decoration:none;">

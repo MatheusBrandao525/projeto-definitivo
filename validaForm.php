@@ -49,10 +49,10 @@
     
         
 
-    move_uploaded_file($imagemCapa['tmp_name'], $destino.$img_nome);             
-    $resizeObj = new resize($destino.$img_nome);
-    $resizeObj -> resizeImage(900, 950, 'crop');
-    $resizeObj -> saveImage($destino.$img_nome, 100);
+        move_uploaded_file($imagemCapa['tmp_name'], $destino.$img_nome);             
+        $resizeObj = new resize($destino.$img_nome);
+        $resizeObj -> resizeImage(750, 850, 'crop');
+        $resizeObj -> saveImage($destino.$img_nome, 100);
     header('location:index.php');
 
     }catch(PDOException $e) { // Se não exploda um erro na tela...

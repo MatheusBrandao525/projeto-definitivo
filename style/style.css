@@ -98,6 +98,24 @@ nav #icon{
     display: none;
 }
 
+.navcenter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.navcenter>ul>li>a{
+    text-decoration: none;
+}
+
+.navcenter>ul>li>a:hover{
+    color: rgb(134, 134, 134);
+}
+
+.navConta{
+    width: 100%;
+    background: #343a40;
+}
+
 .clear{
     clear: both;
 }
@@ -476,11 +494,18 @@ nav #icon{
     align-items: center;
 }
 
+.botaovoltarUser{
+    float: left;
+    position: relative;
+    left: 0;
+}
+
 
 .footer{
     background-color: #2c2c2c; 
     margin-top: 40px; 
     padding-top: 50px; 
+    bottom: 0!important;
     min-height: 400px;
     color: aliceblue;
 }

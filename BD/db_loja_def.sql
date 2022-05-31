@@ -44,7 +44,6 @@ values(default,'camisa social masculina','lorem ipslum silor amet, lorem dolro i
 
 select * from tbl_produto;
 
-delete from tbl_produto where id_produto = 50;
 
 select 	* from tbl_categoria;
 
@@ -60,7 +59,6 @@ as select
 from tbl_produto inner join tbl_categoria
 	on tbl_produto.id_categoria = tbl_categoria.id_categoria;
 
-DELETE FROM tbl_produto WHERE id_produto = '3';
 
 select nome_produto, imagen_produto, descricao, qnt_estoque, vl_produto  from vw_produtos;
 
@@ -90,7 +88,7 @@ dt_venda date not null
 
 
 insert into tbl_usuario
-values(default,'Matheus Felipe', 'Brandão','mathesus@gmail.com', 'exagon10',0, 'Br 429 km 91','Sao Francisco do Guapore','76935-000');
+values(default,'Matheus Felipe', 'Brandão','mafe123silva@gmail.com', 'exagon10',1, 'Br 429 km 91','Sao Francisco do Guapore','76935-000');
 
 select * from tbl_usuario;
 

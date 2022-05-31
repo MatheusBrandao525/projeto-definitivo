@@ -82,7 +82,7 @@ $consultaCat = $cn->query("select * from tbl_categoria");
                     <div class="form-group">
 
                         <label class="label" for="">Valor do Produto</label>
-                        <input class="form-control preco" type="number" min="1" class="number" id="preco" required name="valorproduto">
+                        <input class="form-control preco" type="text" min="1" class="number" id="preco" required name="valorproduto">
                     </div><!--Formulario-->
 
                     <div class="btns">

@@ -46,7 +46,7 @@
 				{
 					case '.jpg':
 					case '.jpeg':
-						$img = @imagecreatefromjpeg($file);
+						$img = @imagecreatefromjpeg($file); 
 						break;
 					case '.gif':
 						$img = @imagecreatefromgif($file);

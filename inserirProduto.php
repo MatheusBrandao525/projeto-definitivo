@@ -51,7 +51,7 @@
 
     move_uploaded_file($imagemCapa['tmp_name'], $destino.$img_nome);             
     $resizeObj = new resize($destino.$img_nome);
-    $resizeObj -> resizeImage(900, 950, 'crop');
+    $resizeObj -> resizeImage(450, 550, 'crop');
     $resizeObj -> saveImage($destino.$img_nome, 100);
     header('location:index.php');
 
