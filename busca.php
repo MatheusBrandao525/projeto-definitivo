@@ -28,6 +28,7 @@
 	include 'conexao.php';
 	include 'menu.php';
 	include	'menu_2.php';
+	include 'menu-principal.php';
 	
 	if(empty($_GET['txtBuscar'])) {
 		echo "<html><script>location.href='index.php'</script></html>";
