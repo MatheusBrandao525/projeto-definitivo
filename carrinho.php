@@ -48,7 +48,7 @@ Fazer validação para  que o usuario nao acesse esta pagina de maneiras indevid
 
 ?> 
 
-<main>
+<main class="alturaCarrinhoDeCompras">
 	<!-- exibindo o valor da variavel total da compra -->
 	<div class="row tituloCart" style="margin-top: 15px;">
 		<h1>Total: R$ <?php echo number_format($total,2,',','.'); ?> </h1>

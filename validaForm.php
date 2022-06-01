@@ -1,8 +1,8 @@
 <?php
 
 
-    session_start();
-    if(empty($_SESSION['Status']) || $_SESSION['Status'] != 1) {
+    session_start();// iniciando a sessão
+    if(empty($_SESSION['Status']) || $_SESSION['Status'] != 1) { // verificando se o usuario é um administrador 
         header('location:index.php');
     }
     include 'conexao.php'; // incluidndo o arquivo de conexao com o banco de dados...
@@ -53,7 +53,7 @@
         $resizeObj = new resize($destino.$img_nome);
         $resizeObj -> resizeImage(750, 850, 'crop');
         $resizeObj -> saveImage($destino.$img_nome, 100);
-    header('location:index.php');
+    header('location:cadastroProdutos.php');
 
     }catch(PDOException $e) { // Se não exploda um erro na tela...
         echo $e->getMessage();

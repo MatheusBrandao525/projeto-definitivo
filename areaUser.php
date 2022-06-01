@@ -18,8 +18,16 @@
 	
 ?>
 	
-<div class="container">
-	<h2 class="text-center">Minhas compras</h2>
+<div class="container alturaAreaUser">
+	<div class="topAreaUser">
+			<a href="config_conta.php">
+				<button class="btn btn-lg btn-danger">Voltar</button>
+			</a>
+	</div>
+
+
+		<h2 class="text-center">Minhas compras</h2>
+
 <div class="row" style="margin-top: 15px;">
 		
 		<div class="col-sm-2 col-sm-offset-1"><h4>Data</h4></div>

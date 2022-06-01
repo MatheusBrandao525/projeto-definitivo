@@ -12,7 +12,10 @@
     
 
 <div class="conteiner-fluid">
-    <?php include_once ('menu-usuario.php'); ?>
+    <?php include 'menu-usuario.php'; ?>
+</div>
+<div class="conteudo-confi-conta">
+
 </div>
 
 </body>

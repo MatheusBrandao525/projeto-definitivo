@@ -20,7 +20,7 @@ if($_SESSION['Status']==1) {
         <ul>
             <li><a href="index.php"><div class="botaovoltarUser"><button class="btn btn-lg btn-danger">Voltar</button></div></a></li>
             <li><a href="admin.php"><strong>Painel administrativo</strong></a></li>
-            <li><a href=""><strong>meus dados</strong></a></li>
+            <li><a href="dadosUser.php"><strong>meus dados</strong></a></li>
             <li><a href="areaUser.php"><strong>minhas compras</strong></a></li>
             <li><a href=""><strong>lista de desejos</strong></a></li>
             <li><a href=""><strong>suporte</strong></a></li>

@@ -9,6 +9,7 @@
     // Incluindo arquivos importantes...
     include 'conexao.php';
     include 'menu.php';
+    include 'menu-principal.php';
 
     //Criar um menu que exibe "Bem vindo [Nome do ADM]!"
     $consulta = $cn->query('select * from tbl_usuario');

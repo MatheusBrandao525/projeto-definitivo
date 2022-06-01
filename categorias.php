@@ -4,7 +4,8 @@
     include 'menu.php'; // incluindo um menu.
     include 'menu_2.php'; // incluindo o segundo menu.
     include 'slider.php'; // incluindo o sistema de slide.
-
+    include 'menu-principal.php';
+    
     $cat = $_GET['cat']; // variavel que recebe a categoria do produto.
 
     // criando uma consulta no banco de dados, e, armazenando os dados na variavel $Consulta.
@@ -23,11 +24,11 @@
         <!--Enquanto a variavel $xibe estiver recebendo dados da variavel $consulta, execute o seguinte codigo.-->
         <?php  while($exibe = $consulta->fetch(PDO::FETCH_ASSOC)) { ?>
 
-            <div class="col-sm-4" style="margin-bottom: 8px;">
+            <div class="col-sm-2" style="margin-bottom: 8px;">
 
                 <img src='imgem/<?php echo $exibe["imagen_produto"]; ?>' class="card-img-top img-responsive" style="width: 100%;"> <!--Responsavel por exibir a imagem do produto-->
 
-                <h3><b><?php echo mb_strimwidth($exibe['nome_produto'],0,25,'...'); ?></b></h3> <!--Responsavel por exibir o nome do produto-->
+                <h5><b><?php echo mb_strimwidth($exibe['nome_produto'],0,25,'...'); ?></b></h5> <!--Responsavel por exibir o nome do produto-->
 
                 <span style="font-size: 20px; color: rgb(24, 24, 24); font-weight: bolder;">R$ <?php echo number_format($exibe['vl_produto'],2,',','.'); ?></span> <!--Responsavel por exibir o preço do produto-->
                 

@@ -48,20 +48,21 @@
 			<h4 style="padding-top:20px">R$ <?php echo $preco; ?></h4>
 		</div>		
 
-		<div class="col-sm-2 quantidadeCart" style="padding-top:20px">
-            <button href="less.php?id=<?php echo $exibe['id_produto'];?>" id="diminuircart" data-id="<?php echo $exibe['id_produto']; ?>" onclik="diminuicart()" type="button" class="btn btn-dark diminuiCart">-</button>
-
+		<div class="col-sm-2 quantidadeCart">
+			<a href="less.php?id=<?php echo $exibe['id_produto'];?>">
+				<button href="less.php?id=<?php echo $exibe['id_produto'];?>" id="diminuircart" type="button" class="btn btn-dark diminuiCart">-</button>
+			</a>
 			    <h4 class="qntcart" id="#qntcart"><?php echo $quantidade; ?> </h4>
 			<?php if($quantidade < $qnt_estoque) { ?>
-
-				<button href="plus.php?id=<?php echo $exibe['id_produto']; ?>" onclik="aumentacart()" id="aumentarcart" data-id="<?php echo $exibe['id_produto'];?>" type="button" class="btn btn-dark aumentaCart">+</button>
-
+			<a href="plus.php?id=<?php echo $exibe['id_produto']; ?>">
+				<button id="aumentarcart" data-id="<?php echo $exibe['id_produto'];?>" type="button" class="btn btn-dark aumentaCart">+</button>
+			</a>
 			<?php }else{ ?>
 				<button href="#" class="btn btn-dark">+</button>
 			<?php } ?>
 		</div>
 
-		<div class="col-sm-1 col-xs-offset-right-1 botaoremover" style="padding-top:15px">
+		<div class="col-sm-1 col-xs-offset-right-1 botaoremover">
 		
 		<!--remove o item do carrinho pelo id -->
 		<a href="removeCarrinho.php?id=<?php echo $id;?>" class="btn btn-lg btn-block btn-danger ajuste">X</a>

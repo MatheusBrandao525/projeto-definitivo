@@ -379,6 +379,11 @@ nav #icon{
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+
+.alturaCarrinhoDeCompras{
+    min-height: 200px;
+}
+
 .tituloCart{
     width: 100%;
 }
@@ -402,8 +407,9 @@ nav #icon{
 }
 
 .quantidadeCart{
-    display: flex;
+    display: flex !important;
     height: 100px;
+    align-items: center;
 }
 
 .quantidadeCart h4{
@@ -411,9 +417,16 @@ nav #icon{
     margin: 0 10px;
 }
 
-.quantidadeCart a{
+.botaoremover{
+    height: 100px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
 
-    margin-top: 10px;
+.botaoremover a{
+    width: 50px;
+    height: 40px;
 }
 
 .quantidadeCart button{
@@ -475,6 +488,12 @@ nav #icon{
     justify-content: space-between;
 }
 
+.botaoAlteraDadosUser{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
 .disflex> a{
     width: 150px;
     margin-left: 10px;
@@ -500,6 +519,24 @@ nav #icon{
     left: 0;
 }
 
+.alturaAreaUser{
+    min-height: 450px;
+}
+
+.topAreaUser{
+    width: 100%;
+    display: flex;
+    padding: 15px 0;
+    justify-content: center;
+}
+
+.topAreaUser>a>button{
+    width: 100px;
+}
+
+.conteudo-confi-conta{
+    min-height: 250px;
+}
 
 .footer{
     background-color: #2c2c2c; 
