@@ -355,9 +355,7 @@ nav #icon{
     max-width: 450px;
     height: 100px;
 }
-.margin h4{
-    line-height: 50px;
-}
+
 .erros{
     width: 100%;
     height: 50px;
@@ -529,6 +527,29 @@ nav #icon{
     padding: 15px 0;
     justify-content: center;
 }
+
+.adc-listaDesejos{
+    width: 140px !important;
+    font-size: 0.70rem;
+    height: auto;
+
+}
+
+.quantidadeDisponivel,.precoItem,.nomeProduto{
+    height: 140px;
+    display: flex;
+    align-items: center;
+}
+
+.botaoAdicionarAoCarrinhoListaDeDesejos{
+    height: 140px;
+
+}
+
+.botaoAdicionarAoCarrinhoListaDeDesejos a{
+    margin-top: 45px;
+}
+
 
 .topAreaUser>a>button{
     width: 100px;
