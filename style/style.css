@@ -575,6 +575,40 @@ nav #icon{
     padding: 5px 5px;
 }
 
+.h3listaDesejos{
+    margin-top: 1rem;
+}
+
+.itensListaDesejos{
+    background: #17a2b8;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.rowListaDesejos{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conteudo-listaDesejos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2c2c2c;
+    width: 280px;
+    height: 140px;
+    padding: 0 !important;
+    border: 1 solid #3498db
+}
+
+.image-lista{
+    background-image: url(imgem/relogio.jpg);
+}
+
 .separaFormModal{
     display: flex;
     justify-content: space-evenly;

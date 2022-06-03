@@ -22,7 +22,7 @@ if($_SESSION['Status']==1) {
             <li><a href="admin.php"><strong>Painel administrativo</strong></a></li>
             <li><a href="dadosUser.php"><strong>meus dados</strong></a></li>
             <li><a href="areaUser.php"><strong>minhas compras</strong></a></li>
-            <li><a href=""><strong>lista de desejos</strong></a></li>
+            <li><a href="listaDesejos.php"><strong>lista de desejos</strong></a></li>
             <li><a href=""><strong>suporte</strong></a></li>
         </ul>
     </nav>
