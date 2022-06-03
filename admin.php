@@ -30,9 +30,6 @@
             <a href="listarProdutoAlt.php"><!--Criar um formulario para alterar produtos-->
                 <button class="btn btn-lg btn-info botoesAdm">Alterar Produtos <i class="fas fa-edit"></i></button>
             </a>
-            <a href="excluiProdutos.php"><!--Criar uma pagina para buscar e excluir produtos-->
-                <button class="btn btn-lg btn-danger botoesAdm">Excluir Produtos <i class="fas fa-times"></i></button>
-            </a>
             <a href="indiceVendas.php"><!--Criar uma pagina que mostre todas as vendas realizadas-->
                 <button class="btn btn-lg btn-success botoesAdm">Vendas <i class="fas fa-chart-line"></i></button>
             </a>
