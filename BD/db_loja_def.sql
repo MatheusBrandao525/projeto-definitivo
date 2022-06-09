@@ -10,7 +10,7 @@ create table tbl_categoria
 id_categoria int primary key auto_increment,
 nome_categoria varchar(30)
 )
-default charset utf8;
+default charset utf8mb4;
 
 
 create table tbl_produto
@@ -24,7 +24,7 @@ qnt_estoque int not null,
 vl_produto decimal(6,2) not null,
 constraint fk_cat foreign key(id_categoria) references tbl_categoria(id_categoria)
 )
-default charset utf8;
+default charset utf8mb4;
 
 select * from tbl_produto;
 
@@ -73,7 +73,7 @@ ds_status boolean not null,
 ds_endereco varchar (80) not null,
 ds_cidade varchar (24) not null,
 no_cep char(9) not null
-) default charset utf8;
+) default charset utf8mb4;
 
 create table tbl_venda(
 id_venda int(11) primary key auto_increment,
@@ -84,7 +84,7 @@ qnt_produto int(11) not null,
 vlr_produto decimal(10,2) not null,
 vlr_total_produto decimal(10,2) generated always as ((qnt_produto * vlr_produto)) virtual,
 dt_venda date not null
-) default charset=utf8;
+) default charset=utf8mb4;
 
 
 insert into tbl_usuario
