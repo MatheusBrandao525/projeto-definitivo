@@ -13,7 +13,7 @@
 
 	$id_usuario = $_SESSION['ID'];
 
-	$consultaVenda = $cn->query("SELECT * FROM vw_Venda WHERE id_usuario= '$id_usuario'");
+	$consultaVenda = $cn->query("SELECT * FROM tbl_venda WHERE id_usuario= '$id_usuario'");
 	
 	
 ?>

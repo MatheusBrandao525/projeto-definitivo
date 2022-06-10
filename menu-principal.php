@@ -1,3 +1,13 @@
+<?php
+
+    include 'conexao.php';
+
+    $consultaCategoria = $cn->query('SELECT * FROM tbl_categoria');
+
+    
+
+?>
+
 <nav id="menu-principal">
             <ul>
                 <li><a class="claselinkS" href="index.php">Home</a></li> <!--Link que redireciona para o Home-->
@@ -7,11 +17,10 @@
                         Categorias
                     </a>
                     <div class="dropdown-menu">
-                        <a href="categorias.php?cat=Masculino" class="dropdown-item">Masculino</a>
-                        <a href="categorias.php?cat=Feminino" class="dropdown-item">Feminino</a>
-                        <a href="categorias.php?cat=Calçados" class="dropdown-item">Calçados</a>
-                        <a href="categorias.php?cat=Relojoaria" class="dropdown-item">Relojoaria</a>
-                        <a href="categorias.php?cat=Joalheria" class="dropdown-item">Joalheria</a>
+                        <?php while($exibe_categoria = $consultaCategoria->fetch(PDO::FETCH_ASSOC)){ ?>
+                        <a href="categorias.php?cat=<?php echo $exibe_categoria['id_categoria'];?>" class="dropdown-item"><?php echo $exibe_categoria['nome_categoria'];?></a>
+                        <?php } ?>
+
                     </div>
                 </li>
                 <li><a class="claselinkS"  href="contato.php">Contato</a></li>

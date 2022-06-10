@@ -9,7 +9,7 @@
         include 'slider.php';
         include 'menu-principal.php';
 
-        $consulta = $cn->query('select nome_produto, id_produto, imagen_produto, descricao, qnt_estoque, vl_produto  from vw_produtos');
+        $consulta = $cn->query('select nome_produto, id_produto, imagen_produto, descricao, qnt_estoque, vl_produto  from tbl_produto');
        
     ?>
 <body>

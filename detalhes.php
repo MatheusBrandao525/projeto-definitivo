@@ -6,7 +6,7 @@
 
         $id_produto = $_GET['id'];
         
-        $consulta = $cn->query("select * from vw_produtos where id_produto= '$id_produto' ");
+        $consulta = $cn->query("select * from tbl_produto where id_produto= '$id_produto' ");
     ?>
 <body>
         <div class="container tituloDetalhes">

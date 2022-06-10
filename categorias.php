@@ -9,7 +9,7 @@
     $cat = $_GET['cat']; // variavel que recebe a categoria do produto.
 
     // criando uma consulta no banco de dados, e, armazenando os dados na variavel $Consulta.
-    $consulta = $cn->query("select id_produto, nome_produto, imagen_produto, descricao, qnt_estoque, vl_produto  from vw_produtos where nome_categoria = '$cat'");
+    $consulta = $cn->query("select nome_produto, id_produto, imagen_produto, descricao, qnt_estoque, vl_produto  from tbl_produto where id_categoria = '$cat'");
 ?>
 
 <style>
@@ -22,21 +22,21 @@
         <div class="row text-center">
 
         <!--Enquanto a variavel $xibe estiver recebendo dados da variavel $consulta, execute o seguinte codigo.-->
-        <?php  while($exibe = $consulta->fetch(PDO::FETCH_ASSOC)) { ?>
+        <?php  while($exibir = $consulta->fetch(PDO::FETCH_ASSOC)) { ?>
 
             <div class="col-sm-2" style="margin-bottom: 8px;">
 
-                <img src='imgem/<?php echo $exibe["imagen_produto"]; ?>' class="card-img-top img-responsive" style="width: 100%;"> <!--Responsavel por exibir a imagem do produto-->
+                <img src='imgem/<?php echo $exibir["imagen_produto"]; ?>' class="card-img-top img-responsive" style="width: 100%;"> <!--Responsavel por exibir a imagem do produto-->
 
-                <h5><b><?php echo mb_strimwidth($exibe['nome_produto'],0,25,'...'); ?></b></h5> <!--Responsavel por exibir o nome do produto-->
+                <h5><b><?php echo mb_strimwidth($exibir['nome_produto'],0,25,'...'); ?></b></h5> <!--Responsavel por exibir o nome do produto-->
 
-                <span style="font-size: 20px; color: rgb(24, 24, 24); font-weight: bolder;">R$ <?php echo number_format($exibe['vl_produto'],2,',','.'); ?></span> <!--Responsavel por exibir o preço do produto-->
+                <span style="font-size: 20px; color: rgb(24, 24, 24); font-weight: bolder;">R$ <?php echo number_format($exibir['vl_produto'],2,',','.'); ?></span> <!--Responsavel por exibir o preço do produto-->
                 
-                <a class="btn btn-info btn-block btndetalhes" href="detalhes.php?id=<?php echo $exibe['id_produto']; ?>">Detalhes</a> <!--Botão de detalhes-->
+                <a class="btn btn-info btn-block btndetalhes" href="detalhes.php?id=<?php echo $exibir['id_produto']; ?>">Detalhes</a> <!--Botão de detalhes-->
 
                 <div class="manterbotoes">
                 <?php if(empty($_SESSION['ID'])) { ?> <!--Verificando, se a sessão ID estiver vazia entao..-->
-                    <?php if($exibe['qnt_estoque'] > 0) {?> <!--Verificando se a quantidade do produto em estoque é maior que zero-->
+                    <?php if($exibir['qnt_estoque'] > 0) {?> <!--Verificando se a quantidade do produto em estoque é maior que zero-->
                         <a href="login.php" style="text-decoration:none;"> <!--Se a sessão ID não estiver setada entao o usuario ao clicar em adicionar ao carrinho é redirecionado para a pagina de login-->
                             <button type="button" class="btn btn-success btn-block">Adicionar ao Carrinho</button>
                         </a>
@@ -47,10 +47,10 @@
                     <?php } ?>
                 <!--Se a sessão ID estiver setada então execute o seguinte codigo.-->
                 <?php } else { ?>
-                    <?php if($exibe['qnt_estoque'] > 0) {?> <!--Verificando se a quantidade do produto em estoque é maior que zero-->
+                    <?php if($exibir['qnt_estoque'] > 0) {?> <!--Verificando se a quantidade do produto em estoque é maior que zero-->
 
                          <!--já que a sessão ID está setada e a quantidade em estoque é maior que zero então ao clicar no botão adicionar ao carrinho redirecione o usuario para a pagina de carrinho-->
-                        <a href="carrinho.php?id=<?php echo $exibe['id_produto'];?>" style="text-decoration:none;">
+                        <a href="carrinho.php?id=<?php echo $exibir['id_produto'];?>" style="text-decoration:none;">
                             <button type="button" class="btn btn-success btn-block">Adicionar ao Carrinho</button>
                         </a>
                     <?php } else { ?>

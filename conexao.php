@@ -2,9 +2,9 @@
    $servidor ="database";
    // conexao com minha maquina pessoal...
 
-   $usuario ="docker";
-   $senha ="docker";
-   $banco ="docker";
+   $usuario ="Matheus";
+   $senha ="1exagon1@";
+   $banco ="db_loja_def";
 
 
    // conexao com a maquina do meu trabalho...

@@ -1,12 +1,6 @@
-<!--
-
-Completo => Criar um form-group para cadastro de produtos e linkar com o botão cadastrar produtos da pagina Adm...
-
-Em Andamento => Fazer a validação do formulario de cadastro de produtos para que o usuario preencha os campos devidamente...
--->
 <?php 
-
 session_start();
+
 if(empty($_SESSION['Status']) || $_SESSION['Status'] != 1) {
     header('location:index.php');
 }

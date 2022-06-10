@@ -23,8 +23,6 @@
 	
 	<?php
 	
-	session_start();
-	
 	include 'conexao.php';
 	include 'menu.php';
 	include	'menu_2.php';
@@ -35,7 +33,7 @@
 	}
 
     $pesquisa = $_GET['txtBuscar'];
-    $consulta = $cn->query("select * from vw_produtos where nome_produto like concat('%','$pesquisa','%') or descricao like concat ('%','$pesquisa','%')");
+    $consulta = $cn->query("select * from tbl_produto where nome_produto like concat('%','$pesquisa','%') or descricao like concat ('%','$pesquisa','%')");
 
 	if( $consulta->rowCount() ==0 ) {
 		echo "<html><script>location.href='erro2.php'</script></html>";
