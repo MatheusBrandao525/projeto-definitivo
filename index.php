@@ -30,7 +30,13 @@
     <div class="container" id="produtos" style="margin-top: 3px;">
         <div class="row text-center">
 
-        <?php  while($exibe = $consulta->fetch(PDO::FETCH_ASSOC)) { ?>
+        <?php  while($exibe = $consulta->fetch(PDO::FETCH_ASSOC)) { 
+        
+            $consultaGeral = $cn->query("SELECT id_usuario, nome_usuario FROM tbl_usuario");
+            $exibeUser = $consultaGeral->fetch(PDO::FETCH_ASSOC);    
+            
+            
+            ?>
 
             <div class="col-sm-2" style="margin-bottom: 8px;">
 
@@ -54,7 +60,7 @@
                     <?php } ?>
                 <?php }else { ?>
                     <?php if($exibe['qnt_estoque'] > 0) {?>
-                        <a href="carrinho.php?id=<?php echo $exibe['id_produto']; ?>" style="text-decoration:none;">
+                        <a href="carrinho.php?id=<?php echo $exibe['id_produto']; ?>&id_user=<?php echo $exibeUser['id_usuario'];?>&nomeUser=<?php echo $exibeUser['nome_usuario'];?>&nomeProduto= <?php echo $exibe['nome_produto'];?>&valorProd= <?php echo $exibe['vl_produto'];?>" style="text-decoration:none;">
                             <button type="button" class="btn btn-success btn-block">Adicionar ao Carrinho</button>
                         </a>
                     <?php } else { ?>
