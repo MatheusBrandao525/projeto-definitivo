@@ -44,9 +44,14 @@
                 <h5 class="tituloProduto"><strong><b><?php echo mb_strimwidth($exibe['nome_produto'],0,25,'...'); ?></b></strong></h5>
                 <span style="font-size: 20px; color: rgb(24, 24, 24); font-weight: bolder;">R$ <?php echo number_format($exibe['vl_produto'],2,',','.'); ?></span>
                 
+                <input type="hidden" name="nomeProd" value="<?php echo $exibe['nome_produto'];?>">
+                <input type="hidden" name="precoProd" value="<?php echo number_format($exibe['vl_produto'],2,',','.');?>">
+
                 <a href="detalhes.php?id=<?php echo $exibe['id_produto']; ?>" style="text-decoration:none;">
                     <button type="button" class="btn btn-info btn-block" style="margin-bottom: 5px;">Detalhes</button>
                 </a>
+
+
                 <div class="manterbotoes">
                 <?php if(empty($_SESSION['ID'])) { ?>
                     <?php if($exibe['qnt_estoque'] > 0) {?>
@@ -61,7 +66,7 @@
                 <?php }else { ?>
                     <?php if($exibe['qnt_estoque'] > 0) {?>
                         <a href="" style="text-decoration:none;">
-                            <button type="sibmit" class="btn btn-success btn-block" value="">Adicionar ao Carrinho</button>
+                            <button type="sibmit" name="add_to_cart" class="btn btn-success btn-block" value="">Adicionar ao Carrinho</button>
                         </a>
                     <?php } else { ?>
                         <a href="" style="text-decoration:none;">
