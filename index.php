@@ -39,7 +39,7 @@
             ?>
 
             <div class="col-sm-2" style="margin-bottom: 8px;">
-
+            <form action="cart.php?id=<?php echo $exibe['id_produto']; ?>" method="post">
                 <img src='imgem/<?php echo $exibe["imagen_produto"]; ?>' class="card-img-top img-responsive" style="width: 100%;">
                 <h5 class="tituloProduto"><strong><b><?php echo mb_strimwidth($exibe['nome_produto'],0,25,'...'); ?></b></strong></h5>
                 <span style="font-size: 20px; color: rgb(24, 24, 24); font-weight: bolder;">R$ <?php echo number_format($exibe['vl_produto'],2,',','.'); ?></span>
@@ -60,8 +60,8 @@
                     <?php } ?>
                 <?php }else { ?>
                     <?php if($exibe['qnt_estoque'] > 0) {?>
-                        <a href="carrinho.php?id=<?php echo $exibe['id_produto']; ?>&id_user=<?php echo $exibeUser['id_usuario'];?>&nomeUser=<?php echo $exibeUser['nome_usuario'];?>&nomeProduto= <?php echo $exibe['nome_produto'];?>&valorProd= <?php echo $exibe['vl_produto'];?>" style="text-decoration:none;">
-                            <button type="button" class="btn btn-success btn-block">Adicionar ao Carrinho</button>
+                        <a href="" style="text-decoration:none;">
+                            <button type="sibmit" class="btn btn-success btn-block" value="">Adicionar ao Carrinho</button>
                         </a>
                     <?php } else { ?>
                         <a href="" style="text-decoration:none;">
@@ -70,7 +70,7 @@
                     <?php } ?>
                 <?php } ?>
                 </div>
-                
+                </form>
             </div><!--col-sm-4-->
         <?php } ?>
 
