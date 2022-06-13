@@ -39,11 +39,12 @@
             ?>
 
             <div class="col-sm-2" style="margin-bottom: 8px;">
-            <form action="cart.php?id=<?php echo $exibe['id_produto']; ?>" method="post">
+            <form action="cart.php?id=<?php echo $exibe['id_produto']; ?>&idUser=<?php echo $exibeUser['id_usuario'];?>" method="post">
                 <img src='imgem/<?php echo $exibe["imagen_produto"]; ?>' class="card-img-top img-responsive" style="width: 100%;">
                 <h5 class="tituloProduto"><strong><b><?php echo mb_strimwidth($exibe['nome_produto'],0,25,'...'); ?></b></strong></h5>
                 <span style="font-size: 20px; color: rgb(24, 24, 24); font-weight: bolder;">R$ <?php echo number_format($exibe['vl_produto'],2,',','.'); ?></span>
                 
+                <input type="hidden" name="nomeImg" value="<?php echo $exibe['imagen_produto'];?>">
                 <input type="hidden" name="nomeProd" value="<?php echo $exibe['nome_produto'];?>">
                 <input type="hidden" name="precoProd" value="<?php echo number_format($exibe['vl_produto'],2,',','.');?>">
 
