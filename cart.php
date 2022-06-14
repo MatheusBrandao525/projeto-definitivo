@@ -12,10 +12,10 @@
 
 
 
-
+    
     $codigoProd = $_GET['id'];
     $codigoUser = $_GET['idUser'];
-
+    $quantidade = 1;
 
     $consulta = $cn->query("select * from tbl_produto where id_produto = '$codigoProd'");
     $exibe = $consulta->fetch(PDO::FETCH_ASSOC);
@@ -35,10 +35,9 @@
     try { // Try para tentar inserir os valores no banco de dados...
 
         $inserirCart = $cn->query("
-        INSERT INTO tbl_carrinho(codigo_produto, codigo_usuario, nome_produto, img_produto, vlr_produto) 
-        VALUES ('$codigoProd','$codigoUser','$nomeProd','$nomeImg','$preco')");
+        INSERT INTO tbl_carrinho(codigo_produto, codigo_usuario, nome_produto,quantidade_produto, img_produto, vlr_produto) 
+        VALUES ('$codigoProd','$codigoUser','$nomeProd','$quantidade','$nomeImg','$preco')");
 
-        echo 'produto inserido no carrinho';
 
      header('location:index.php');
 

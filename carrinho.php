@@ -54,7 +54,7 @@
 			<a href="less.php?id=<?php echo $exibe['id_produto'];?>">
 				<button href="less.php?id=<?php echo $exibe['id_produto'];?>" id="diminuircart" type="button" class="btn btn-dark diminuiCart">-</button>
 			</a>
-			    <h4 class="qntcart" id="#qntcart"><?php /* echo $quantidade; */ ?> </h4>
+			    <h4 class="qntcart" id="#qntcart"><?php echo $exibeCart['quantidade_produto']; ?> </h4>
 			<?php /*  if($quantidade < $qnt_estoque) {  */?>
 			<a href="plus.php?id=<?php echo $exibe['id_produto']; ?>">
 				<button id="aumentarcart" data-id="<?php echo $exibe['id_produto'];?>" type="button" class="btn btn-dark aumentaCart">+</button>
@@ -67,14 +67,14 @@
 		<div class="col-sm-1 col-xs-offset-right-1 botaoremover">
 		
 		<!--remove o item do carrinho pelo id -->
-		<a href="removeCarrinho.php?id=<?php echo $id;?>" class="btn btn-lg btn-block btn-danger ajuste">X</a>
+		<a href="removeCarrinho.php?id=<?php echo $exibeCart['codigo_produto'];?>" class="btn btn-lg btn-block btn-danger ajuste">X</a>
 		</div> 
 		
 	</div>	
+	<?php } ?>
 	</div>
 </div>
 	
-	<?php } ?>
 
 
 
@@ -88,9 +88,9 @@
         <div class="acaoCart">
                 <a href="index.php" class="btn btn-primary" style="margin:8px;">Continuar comprando</a>
 
-                <?php if(count($_SESSION['carrinho'])>0){ ?>
+                <?php /* if(){  */?>
                     <a href="finalizarCompra.php" class="btn btn-success">Finalizar compra</a>
-                <?php } ?>
+                <?php /* }  */?>
         </div>
     </div>
 </main>
