@@ -9,40 +9,31 @@
 
 	
 	include 'conexao.php';
-	//include 'nav.php';
 	
 	// verificando se o codigo do produto NÃO está vazio
-	if(!empty($_GET['id'])) {
-		
-		// inserindo o código do produto na variável $cd_prod
-		$id_produto=$_GET['id'];
-		$quantidade_cart=$_GET['quantidade'];
-		// se a sessão carrinho não estiver preenchida
-		if (!isset($_SESSION['carrinho'])) {
-			// será criado uma sessão chamado carrinho para receber um vetor
-			$_SESSION['carrinho'] = array();
-		}
+	$codigoUsuario = $_GET['idUser'];
+	$codigoProduto = $_GET['id'];
 
-		if($_SESSION['carrinho'] [$id_produto] <2) {
-			
-			unset($_SESSION['carrinho'][$id_produto]);
+	$consultaEstoque = $cn->query("SELECT qnt_estoque FROM tbl_produto WHERE id_produto = '$codigoProduto'");
+	$exibeEstoque = $consultaEstoque->fetch(PDO::FETCH_ASSOC);
 
-		}else {
-			$_SESSION['carrinho'][$id_produto]-=1;
-			header('location:carrinho.php');
-		}
+	$consultaQuantidade = $cn->query("SELECT * FROM tbl_carrinho WHERE codigo_produto = '$codigoProduto' AND codigo_usuario = '$codigoUsuario'");
+	$exibeQuantidadeCart = $consultaQuantidade->fetch(PDO::FETCH_ASSOC);
 
-		header('location:carrinho.php');
-	} else {
-		header('location:carrinho.php');
+	$quantidadeEmEstoque = $exibeEstoque['qnt_estoque'];
+	$quantidadeNocarrinho = $exibeQuantidadeCart['quantidade_produto'];
 
-		
-		
-		
-	}	
+	if($consultaQuantidade->rowCount()>0){
+ 			if($quantidadeNocarrinho <1){
+				$excluiCart = $cn->query("DELETE FROM tbl_carrinho WHERE codigo_produto = '$codigo_produto' AND codigo_usuario = '$codigoUsuario'");
+				header('location:carrinho.php');
+				exit();
+			}else{
+				$diminui = $cn->query("UPDATE tbl_carrinho SET quantidade_produto = quantidade_produto -1 WHERE codigo_usuario = '$codigoUsuario' AND codigo_produto = '$codigoProduto';");
 
-
-
-
+				header('location:carrinho.php');
+				exit();
+			}
+		} 
 
 ?>

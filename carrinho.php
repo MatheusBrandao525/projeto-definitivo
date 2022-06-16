@@ -11,6 +11,7 @@
     include 'menu.php';
 
     $id_user = $_SESSION['ID'];
+	
 
     $consultaCart = $cn->query("SELECT * FROM tbl_carrinho where codigo_usuario = '$id_user'");
 
@@ -51,17 +52,17 @@
 		</div>		
 
 		<div class="col-sm-2 quantidadeCart">
-			<a href="less.php?id=<?php echo $exibe['id_produto'];?>">
-				<button href="less.php?id=<?php echo $exibe['id_produto'];?>" id="diminuircart" type="button" class="btn btn-dark diminuiCart">-</button>
+			<a href="less.php?id=<?php echo $exibeCart['codigo_produto']; ?>&idUser=<?php echo $id_user; ?>">
+				<button id="diminuircart" type="button" class="btn btn-dark diminuiCart">-</button>
 			</a>
 			    <h4 class="qntcart" id="#qntcart"><?php echo $exibeCart['quantidade_produto']; ?> </h4>
 			<?php /*  if($quantidade < $qnt_estoque) {  */?>
 			<a href="plus.php?id=<?php echo $exibe['id_produto']; ?>">
 				<button id="aumentarcart" data-id="<?php echo $exibe['id_produto'];?>" type="button" class="btn btn-dark aumentaCart">+</button>
 			</a>
-			<?php /* }else{  */?>
+			<!-- <?php /* }else{  */?>
 				<button href="#" class="btn btn-dark">+</button>
-			<?php /*  }  */?>
+			<?php /*  }  */?> -->
 		</div>
 
 		<div class="col-sm-1 col-xs-offset-right-1 botaoremover">

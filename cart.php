@@ -3,7 +3,6 @@
     session_start();
 
     include 'conexao.php';
-    include 'menu.php';
 
     if(empty($_SESSION['ID'])){
         // Se o usuario não estiver logado então redirecione-o para a pagina de login...
@@ -14,11 +13,11 @@
 
     
     $codigoProd = $_GET['id'];
-    $codigoUser = $_GET['idUser'];
+    $codigoUser = $_SESSION['ID'];
     $quantidade = 1;
 
-    $consulta = $cn->query("select * from tbl_produto where id_produto = '$codigoProd'");
-    $exibe = $consulta->fetch(PDO::FETCH_ASSOC);
+    $consulta = $cn->query("select codigo_produto from tbl_carrinho where codigo_produto = '$codigoProd' and codigo_usuario = '$codigoUser'");
+
 
     // Variaveis que recebem os valores a serem inseridos no banco de dados..
     $nomeProd = $_POST['nomeProd']; // Recebe o nome do produto...
@@ -34,12 +33,23 @@
 
     try { // Try para tentar inserir os valores no banco de dados...
 
+        if($consulta->rowCount()== 0){
         $inserirCart = $cn->query("
         INSERT INTO tbl_carrinho(codigo_produto, codigo_usuario, nome_produto,quantidade_produto, img_produto, vlr_produto) 
         VALUES ('$codigoProd','$codigoUser','$nomeProd','$quantidade','$nomeImg','$preco')");
 
+        header('location:index.php');
+        exit();
+        }else{
+            $atualizaQuantidade = $cn->query("
+                update tbl_carrinho set quantidade_produto = quantidade_produto + '$quantidade' where codigo_produto = '$codigoProd' and codigo_usuario ='$codigoUser'
+            ");
+            header('location:index.php');
+            exit();
 
-     header('location:index.php');
+        }
+
+/*     echo '<script>window.location.href.index.php</script>'; */
 
     }catch(PDOException $e) { // Se não exploda um erro na tela...
         echo $e->getMessage();
