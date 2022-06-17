@@ -64,7 +64,7 @@
 		<div class="col-sm-1 col-xs-offset-right-1 botaoremover">
 		
 		<!--remove o item do carrinho pelo id -->
-		<a href="removeCarrinho.php?id=<?php echo $exibeCart['codigo_produto'];?>" class="btn btn-lg btn-block btn-danger ajuste">X</a>
+		<a href="removeCarrinho.php?id=<?php echo $exibeCart['codigo_produto'];?>&idUser=<?php echo $id_user;?>" class="btn btn-lg btn-block btn-danger ajuste">X</a>
 		</div> 
 		
 	</div>	

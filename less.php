@@ -24,14 +24,16 @@
 	$quantidadeNocarrinho = $exibeQuantidadeCart['quantidade_produto'];
 
 	if($consultaQuantidade->rowCount()>0){
- 			if($quantidadeNocarrinho <1){
-				$excluiCart = $cn->query("DELETE FROM tbl_carrinho WHERE codigo_produto = '$codigo_produto' AND codigo_usuario = '$codigoUsuario'");
-				header('location:carrinho.php');
-				exit();
-			}else{
+ 			if($quantidadeNocarrinho >1){
 				$diminui = $cn->query("UPDATE tbl_carrinho SET quantidade_produto = quantidade_produto -1 WHERE codigo_usuario = '$codigoUsuario' AND codigo_produto = '$codigoProduto';");
 
 				header('location:carrinho.php');
+				exit();
+
+			}else if($quantidadeNocarrinho <2){
+				$exclui = $cn->query("DELETE FROM tbl_carrinho WHERE codigo_usuario ='$codigoUsuario' AND codigo_produto = '$codigoProduto'");
+
+ 				header('location:carrinho.php');
 				exit();
 			}
 		} 
