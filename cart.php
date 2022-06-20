@@ -12,11 +12,11 @@
 
 
     
-    $codigoProd = $_GET['id'];
-    $codigoUser = $_SESSION['ID'];
+    $codigoProd = $_GET['id']; // recebendo o código do produto...
+    $codigoUser = $_SESSION['ID']; // recebendo o ID do usuario...
     $quantidade = 1;
 
-    $consulta = $cn->query("select codigo_produto from tbl_carrinho where codigo_produto = '$codigoProd' and codigo_usuario = '$codigoUser'");
+    $consulta = $cn->query("SELECT codigo_produto FROM tbl_carrinho WHERE codigo_produto = '$codigoProd' AND codigo_usuario = '$codigoUser'");
 
 
     // Variaveis que recebem os valores a serem inseridos no banco de dados..
@@ -34,11 +34,10 @@
     try { // Try para tentar inserir os valores no banco de dados...
 
         if($consulta->rowCount()== 0){
-        $inserirCart = $cn->query("
-        INSERT INTO tbl_carrinho(codigo_produto, codigo_usuario, nome_produto,quantidade_produto, img_produto, vlr_produto) 
+        $inserirCart = $cn->query("INSERT INTO tbl_carrinho(codigo_produto, codigo_usuario, nome_produto,quantidade_produto, img_produto, vlr_produto) 
         VALUES ('$codigoProd','$codigoUser','$nomeProd','$quantidade','$nomeImg','$preco')");
-
-        header('location:index.php');
+        
+        header('location:index.php'); 
         exit();
         }else{
             $atualizaQuantidade = $cn->query("
@@ -48,8 +47,6 @@
             exit();
 
         }
-
-/*     echo '<script>window.location.href.index.php</script>'; */
 
     }catch(PDOException $e) { // Se não exploda um erro na tela...
         echo $e->getMessage();

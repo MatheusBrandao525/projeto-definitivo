@@ -16,80 +16,80 @@
     $consultaCart = $cn->query("SELECT * FROM tbl_carrinho where codigo_usuario = '$id_user'");
 
 
+
 ?> 
 
-<main class="alturaCarrinhoDeCompras">
+<h2 class="text-center">Carrinho de compras</h2>
+<main class="row alturaCarrinhoDeCompras">
+	<div class="col-sm-8 espacamentoLateralCarrnho">
+	<div class="w100">
+		<h3 class="text-center">Produtos</h3>
+	<?php
+	$total = 0;
 
-<div class="container-fluid containnerCart">
+		// criando um loop para sessão carrinho recebe o $cd e a quantidade
+		while($exibeCart = $consultaCart->fetch(PDO::FETCH_ASSOC)) {
+	?>
+		<div class="row exibeProdutosCarrinho">
+				<div class="col-sm-2 display-flex">
+					<img src="imgem/<?php echo $exibeCart['img_produto']; ?>" class="img-responsiva">
+				</div>
+				<div class="col-sm-3 display-flex">
+					<h5><?php echo $exibeCart['nome_produto']; ?></h5>
+				</div>
+				<div class="col-sm-2 display-flex">
+					<h5>R$ <?php echo $exibeCart['vlr_produto']; ?></h5>
+				</div>
+				<div class="col-sm-2 display-flex">
+					<a href="less.php?id=<?php echo $exibeCart['codigo_produto']; ?>&idUser=<?php echo $id_user; ?>">
+						<button id="diminuircart" type="button" class="btn btn-dark diminuiCart">-</button>
+					</a>
+						<h4 class="qntcart" id="#qntcart"><?php echo $exibeCart['quantidade_produto']; ?> </h4>
+					<a href="plus.php?id=<?php echo $exibeCart['codigo_produto']; ?>&idUser=<?php echo $id_user; ?>">
+						<button id="aumentarcart" type="button" class="btn btn-dark aumentaCart">+</button>
+					</a>
+				</div>
+				<div class="col-sm-2 display-flex	">
+					<a href="removeCarrinho.php?id=<?php echo $exibeCart['codigo_produto'];?>&idUser=<?php echo $id_user;?>" class="btn btn-lg btn-block btn-danger ajuste">Remover</a>
+				</div>
+
+		</div>
 	
-	<div class="row text-center tituloCart" style="margin-top: 15px;">
-		<h1>Carrinho de Compras</h1>
+		<?php
+	
+			$total += $exibeCart['vlr_produto'] * $exibeCart['quantidade_produto'];
+
+		}
+	 	?>
 	</div>
-	
-    <?php
+	</div>
 
-    $total = 0; // variavel total que recebe valor nulo
+	<div class="col-sm-4 espacorigth">
 
-    // criando um loop para sessão carrinho recebe o $cd e a quantidade
-    while($exibeCart = $consultaCart->fetch(PDO::FETCH_ASSOC)) {
+	<?php
 
-    ?>
+		$frete = 50;
 
-	<div class="row dadosCarrinho" style="margin-top: 15px;">
-			
-		<div class="col-sm-1 col-sm-offset-1">
-			<img src="imgem/<?php echo $exibeCart['img_produto']; ?>" class="img-responsiva">
+		$valorFinal = $total + $frete;
+
+	?>
+		<h3 class="text-center">Informações do carrinho</h3>
+		<div class="infoCarrinho">
+			<p>Produtos: R$ <?php echo number_format($total,2,',','.'); ?></p>
+			<p>Frete: R$ <?php echo number_format($frete,2,',','.'); ?></p>
+			<p>Total: R$ <?php echo number_format($valorFinal,2,',','.'); ?></p>
+			<div class="botoesCart">
+				<div class="acaoCart">
+					<a href="index.php" class="btn btn-primary" style="margin:8px;">Continuar comprando</a>
+
+					<?php /* if(){  */?>
+						<a href="finalizarCompra.php" class="btn btn-success">Finalizar compra</a>
+					<?php /* }  */?>
+				</div>
+			</div>
 		</div>
-		
-		
-		<div class="col-sm-4 margin">
-			<h4 style="padding-top:20px"><?php echo $exibeCart['nome_produto']; ?></h4>
-		</div>	
-		
-		
-		<div class="col-sm-2 precoCart">
-			<h4 style="padding-top:20px">R$ <?php echo $exibeCart['vlr_produto']; ?></h4>
-		</div>		
-
-		<div class="col-sm-2 quantidadeCart">
-			<a href="less.php?id=<?php echo $exibeCart['codigo_produto']; ?>&idUser=<?php echo $id_user; ?>">
-				<button id="diminuircart" type="button" class="btn btn-dark diminuiCart">-</button>
-			</a>
-			<h4 class="qntcart" id="#qntcart"><?php echo $exibeCart['quantidade_produto']; ?> </h4>
-			<a href="plus.php?id=<?php echo $exibeCart['codigo_produto']; ?>&idUser=<?php echo $id_user; ?>">
-				<button id="aumentarcart" type="button" class="btn btn-dark aumentaCart">+</button>
-			</a>
-		</div>
-
-		<div class="col-sm-1 col-xs-offset-right-1 botaoremover">
-		
-		<!--remove o item do carrinho pelo id -->
-		<a href="removeCarrinho.php?id=<?php echo $exibeCart['codigo_produto'];?>&idUser=<?php echo $id_user;?>" class="btn btn-lg btn-block btn-danger ajuste">X</a>
-		</div> 
-		
 	</div>	
-	<?php } ?>
-	</div>
-</div>
-	
 
-
-
-
-	<!-- exibindo o valor da variavel total da compra -->
-	<div class="row tituloCart" style="margin-top: 15px;">
-		<h1>Total: R$ <?php echo number_format($total,2,',','.'); ?> </h1>
-	</div>
-	
-    <div class="botoesCart">
-        <div class="acaoCart">
-                <a href="index.php" class="btn btn-primary" style="margin:8px;">Continuar comprando</a>
-
-                <?php /* if(){  */?>
-                    <a href="finalizarCompra.php" class="btn btn-success">Finalizar compra</a>
-                <?php /* }  */?>
-        </div>
-    </div>
 </main>
 
 <?php 

@@ -34,7 +34,9 @@
 				header('location:carrinho.php');
 				exit();
 			}elseif($quantidadeNocarrinho == $quantidadeEmEstoque){
-				echo 'impossivel adicionar mais produtos!';
+				echo "<script>alert('Mensagem');</script>";
+
+				echo "<script>window.location.replace('carrinho.php');</script>";
 			}
 		} 
 
