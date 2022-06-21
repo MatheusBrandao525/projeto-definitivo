@@ -15,8 +15,6 @@
 
     $consultaCart = $cn->query("SELECT * FROM tbl_carrinho where codigo_usuario = '$id_user'");
 
-
-
 ?> 
 
 <h2 class="text-center">Carrinho de compras</h2>
@@ -29,6 +27,9 @@
 
 		// criando um loop para sessão carrinho recebe o $cd e a quantidade
 		while($exibeCart = $consultaCart->fetch(PDO::FETCH_ASSOC)) {
+		$codigoProduto = $exibeCart['codigo_produto'];
+		$precoProduto = $cn->query("SELECT vl_produto FROM tbl_produto WHERE id_produto = '$codigoProduto'");
+		$exibePreco = $precoProduto->fetch(PDO::FETCH_ASSOC);
 	?>
 		<div class="row exibeProdutosCarrinho">
 				<div class="col-sm-2 display-flex">
@@ -38,7 +39,7 @@
 					<h5><?php echo $exibeCart['nome_produto']; ?></h5>
 				</div>
 				<div class="col-sm-2 display-flex">
-					<h5>R$ <?php echo $exibeCart['vlr_produto']; ?></h5>
+					<h5>R$ <?php echo number_format($exibePreco['vl_produto'],2,',','.'); ?></h5>
 				</div>
 				<div class="col-sm-2 display-flex">
 					<a href="less.php?id=<?php echo $exibeCart['codigo_produto']; ?>&idUser=<?php echo $id_user; ?>">
@@ -57,7 +58,7 @@
 	
 		<?php
 	
-			$total += $exibeCart['vlr_produto'] * $exibeCart['quantidade_produto'];
+			$total += $exibePreco['vl_produto'] * $exibeCart['quantidade_produto'];
 
 		}
 	 	?>
