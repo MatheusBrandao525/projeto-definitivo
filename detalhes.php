@@ -8,20 +8,47 @@
         
         $consulta = $cn->query("select * from tbl_produto where id_produto= '$id_produto' ");
     ?>
-<body>
+<body class="body">
         <div class="container tituloDetalhes">
             <h1>Detalhes do produto</h1>
         </div>
-    <section class="row ">
+    <section class="row w100">
         <div class="container corpoDetalhes">
         <?php $exibe = $consulta->fetch(PDO::FETCH_ASSOC); { ?>
         <div class="col-sm-9 displayFlex">
             <div>
-                <div class="imagem displayFlex">
-                    <img class="imgPrincipal" src='imgem/<?php echo $exibe["imagen_produto"]; ?>' alt="">
+
+                <div class="row imagem displayFlex">
+                    <div class="col-sm-1">
+                        <div class="wishList marginTop">
+                            <span class="iconDetalhe"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="wishList marginTop">
+                            <span class="iconDetalhe"><i class="fa fa-share-alt" aria-hidden="true"></i></span> 
+                        </div>
+                    </div>
+                    <div class="col-sm-11 displayFlex">
+                        <img class="imgPrincipal" src='imgem/<?php echo $exibe["imagen_produto"]; ?>' alt="">
+                    </div>
+                </div>
+                <div class="displayFlex marginTop">
+                    <div class="displayFlex justy">
+                        <div class="imgp">
+                            <img class="imgPrincipal" src='imgem/<?php echo $exibe["imagen_produto"]; ?>' alt="">
+                        </div>
+                        <div class="imgp">
+                            <img class="imgPrincipal" src='imgem/<?php echo $exibe["imagen_produto"]; ?>' alt="">
+                        </div>
+                        <div class="imgp">
+                            <img class="imgPrincipal" src='imgem/<?php echo $exibe["imagen_produto"]; ?>' alt="">
+                        </div>
+                        <div class="imgp">
+                            <img class="imgPrincipal" src='imgem/<?php echo $exibe["imagen_produto"]; ?>' alt="">
+                        </div>
+                    </div>
                 </div>
                 <div>
-                    <h5>Descrição</h5>
+                    <h5 class="text-center marginTop">Descrição</h5>
                     <p><?php echo $exibe['descricao']; ?></p>
                 </div>
             </div>
@@ -59,7 +86,7 @@
                 <div class="marginTop">
                     <span>Calcular frete</span>
                     <form action="#" method="post">
-                        <input type="text" placeholder="CEP">
+                        <input type="text" class="formCep" placeholder="Insira seu CEP">
                     </form>
                 </div>
 
@@ -76,14 +103,14 @@
                 <?php if(empty($_SESSION['ID'])) { ?>
                         <?php if($exibe['qnt_estoque'] > 0) {?>
                             <a class="linkdecoration" href="login.php">
-                                <button type="button" class="btn btn-success btn-block">Adicionar ao Carrinho</button>
+                                <button type="button" class="btn btn-success btn-block btnDetalhes">Adicionar ao Carrinho</button>
                             </a>
-                            <a href="index.php" class="btn btn-danger btn-block voltar">Voltar</a>
+                            <a href="index.php" class="btn btn-danger btn-block voltar btnDetalhes">Voltar</a>
                         <?php } else { ?>
                             <a class="linkdecoration" href="">
-                                <button type="button" class="btn btn-danger btn-block" disabled >Produto indisponivel</button>
+                                <button type="button" class="btn btn-danger btn-block btnDetalhes" disabled >Produto indisponivel</button>
                             </a>
-                            <a href="index.php" class="btn btn-danger btn-block voltar">Voltar</a>
+                            <a href="index.php" class="btn btn-danger btn-block voltar btnDetalhes">Voltar</a>
                         <?php } ?>
                     <?php }else { ?>
                         <?php if($exibe['qnt_estoque'] > 0) {?>
