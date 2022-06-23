@@ -83,26 +83,6 @@
         </div><!--Row-->
     </div><!--container-->
 
-<!--     <div class="container-fluid" style="background-color: rgb(111, 120, 129); border-top: 2px solid rgb(27, 26, 26);">
-        <H1 class="text-center"></H1>
-        <div class="row text-center">
-            <div class="col-sm-4">
-                <img class="card-img-top" src="imgem/" alt="">
-                <H1 class="titulo" style="font-size: 22px; color: rgb(0, 0, 0);">Sapatos</H1>
-            </div>
-
-            <div class="col-sm-4">
-                <img class="card-img-top" src="imgem/" alt="">
-                <H1 class="titulo" style="font-size: 22px; color: rgb(0, 0,0);">Relógios</H1>
-            </div>
-
-            <div class="col-sm-4">
-                <img class="card-img-top" src="imgem/" alt="">
-                <H1 class="titulo" style="font-size: 22px; color: rgb(0, 0, 0);">Jóias</H1>
-            </div>
-        </div>
-    </div> -->
-
 </body>
     <?php
         include 'footer.php'
