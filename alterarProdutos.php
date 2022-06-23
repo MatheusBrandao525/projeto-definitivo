@@ -51,6 +51,24 @@ $exibeProd = $consultaProduto->fetch(PDO::FETCH_ASSOC);
 
                     <div class="form-group">
 
+                        <label class="label" for="">Peso</label>
+                        <input class="form-control" type="text" class="input" required name="peso">
+                    </div><!--Formulario-->
+
+                    <div class="form-group">
+
+                        <label class="label" for="">Largura</label>
+                        <input class="form-control" type="text" class="input" required name="largura">
+                    </div><!--Formulario-->
+
+                    <div class="form-group">
+
+                        <label class="label" for="">Altura</label>
+                        <input class="form-control" type="text" class="input" required name="altura">
+                    </div><!--Formulario-->
+
+                    <div class="form-group">
+
                         <label class="label" for="">Descrição do Produto</label>
                         <input class="form-control" type="text" class="input" value="<?php echo $exibeProd['descricao'];?>" required name="descricaoproduto">
                     </div><!--Formulario-->
