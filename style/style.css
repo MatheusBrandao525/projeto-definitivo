@@ -309,13 +309,19 @@ nav #icon{
 }
 
 .bordaInferior{
+    width: 100%;
     border-bottom: 3px solid #17a2b8;
 }
 
 .formulario_produto{
     display: inline-block;
-    width: 500px;
-    padding: 0 90px;
+    width: 100%;
+}
+
+.frmCadastroProd{
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 2%;
 }
 
 .label{
@@ -332,9 +338,22 @@ nav #icon{
     width: 85px;
 }
 
+.estoqueEvalor{
+    display: flex;
+    justify-content: space-around;
+}
+
+.quantidadeEmEstoque,.vlrUnitario{
+    width: 100px !important;
+}
+
 .formulario{
     width: 100%;
     margin-bottom: 15px;
+}
+
+.center{
+    width: 100% !important;
 }
 
 .center >.tituloForm{
@@ -346,12 +365,22 @@ nav #icon{
 }
 
 .btns{
-    display: flex;
+    margin-top: 5rem;
+}
+
+.btns a{
+    text-decoration: none;
 }
 
 .btnVoltar{
-    margin-left: 15px;
+    margin-top: 1rem;
 }
+
+.slcImagem{
+    font-size: 0.80rem;
+}
+
+
 .dadosCarrinho{
     height: 140px;
     display:flex;
