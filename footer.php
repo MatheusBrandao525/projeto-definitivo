@@ -41,4 +41,15 @@ function hideModal(){
     element.classList.remove("show-modal");
 }
 
+function showModalCat() {
+    var element = document.getElementById("modalCategorias");
+    element.classList.add("show-modal");
+
+}
+
+function hideModalCat(){
+    var element = document.getElementById("modalCategorias");
+    element.classList.remove("show-modal");
+}
+
 </script>   
