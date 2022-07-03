@@ -34,9 +34,8 @@
 				header('location:carrinho.php');
 				exit();
 			}elseif($quantidadeNocarrinho == $quantidadeEmEstoque){
-				echo "<script>alert('Mensagem');</script>";
-
-				echo "<script>window.location.replace('carrinho.php');</script>";
+				header('location:carrinho.php');
+				exit();
 			}
 		} 
 

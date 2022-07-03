@@ -28,18 +28,18 @@
 		// criando um loop para sessão carrinho recebe o $cd e a quantidade
 		while($exibeCart = $consultaCart->fetch(PDO::FETCH_ASSOC)) {
 		$codigoProduto = $exibeCart['codigo_produto'];
-		$precoProduto = $cn->query("SELECT vl_produto FROM tbl_produto WHERE id_produto = '$codigoProduto'");
-		$exibePreco = $precoProduto->fetch(PDO::FETCH_ASSOC);
+		$dadosProduto = $cn->query("SELECT nome_produto, imagen_produto, vl_produto FROM tbl_produto WHERE id_produto = '$codigoProduto'");
+		$exibeDadosProduto = $dadosProduto->fetch(PDO::FETCH_ASSOC);
 	?>
 		<div class="row exibeProdutosCarrinho">
 				<div class="col-sm-2 display-flex">
-					<img src="imgem/<?php echo $exibeCart['img_produto']; ?>" class="img-responsiva">
+					<img src="imgem/<?php echo $exibeDadosProduto['imagen_produto']; ?>" class="img-responsiva">
 				</div>
 				<div class="col-sm-3 display-flex">
-					<h5><?php echo $exibeCart['nome_produto']; ?></h5>
+					<h5><?php echo $exibeDadosProduto['nome_produto']; ?></h5>
 				</div>
 				<div class="col-sm-2 display-flex">
-					<h5>R$ <?php echo number_format($exibePreco['vl_produto'],2,',','.'); ?></h5>
+					<h5>R$ <?php echo number_format($exibeDadosProduto['vl_produto'],2,',','.'); ?></h5>
 				</div>
 				<div class="col-sm-2 display-flex">
 					<a href="less.php?id=<?php echo $exibeCart['codigo_produto']; ?>&idUser=<?php echo $id_user; ?>">
@@ -58,7 +58,7 @@
 	
 		<?php
 	
-			$total += $exibePreco['vl_produto'] * $exibeCart['quantidade_produto'];
+			$total += $exibeDadosProduto['vl_produto'] * $exibeCart['quantidade_produto'];
 
 		}
 	 	?>

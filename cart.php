@@ -20,9 +20,7 @@
 
 
     // Variaveis que recebem os valores a serem inseridos no banco de dados..
-    $nomeProd = $_POST['nomeProd']; // Recebe o nome do produto...
     $preco = $_POST['precoProd']; // Recebe o valor do produto...
-    $nomeImg = $_POST['nomeImg'];
 
     // Fazendo tratamento do formato do valor do produto antes de enviar para o baco...
     $rermoveponto = '.';  // Criando variável e atribuindo o valor de ponto para ela...
@@ -34,8 +32,8 @@
     try { // Try para tentar inserir os valores no banco de dados...
 
         if($consulta->rowCount()== 0){
-        $inserirCart = $cn->query("INSERT INTO tbl_carrinho(codigo_produto, codigo_usuario, nome_produto,quantidade_produto, img_produto, vlr_produto) 
-        VALUES ('$codigoProd','$codigoUser','$nomeProd','$quantidade','$nomeImg','$preco')");
+        $inserirCart = $cn->query("INSERT INTO tbl_carrinho(codigo_produto, codigo_usuario,quantidade_produto, vlr_produto) 
+        VALUES ('$codigoProd','$codigoUser','$quantidade','$preco')");
         
         header('location:index.php'); 
         exit();
