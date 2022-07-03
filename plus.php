@@ -34,8 +34,8 @@
 				header('location:carrinho.php');
 				exit();
 			}elseif($quantidadeNocarrinho == $quantidadeEmEstoque){
-				header('location:carrinho.php');
-				exit();
+/* 				header('location:carrinho.php');
+				exit(); */
 			}
 		} 
 

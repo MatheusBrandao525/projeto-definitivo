@@ -28,8 +28,11 @@
 		// criando um loop para sessão carrinho recebe o $cd e a quantidade
 		while($exibeCart = $consultaCart->fetch(PDO::FETCH_ASSOC)) {
 		$codigoProduto = $exibeCart['codigo_produto'];
-		$dadosProduto = $cn->query("SELECT nome_produto, imagen_produto, vl_produto FROM tbl_produto WHERE id_produto = '$codigoProduto'");
+		$dadosProduto = $cn->query("SELECT nome_produto, imagen_produto, qnt_estoque, vl_produto FROM tbl_produto WHERE id_produto = '$codigoProduto'");
 		$exibeDadosProduto = $dadosProduto->fetch(PDO::FETCH_ASSOC);
+
+		$quantidadeEmEstoque = $exibeDadosProduto['qnt_estoque'];
+		$quantidadeNoCarrinho = $exibeCart['quantidade_produto'];	
 	?>
 		<div class="row exibeProdutosCarrinho">
 				<div class="col-sm-2 display-flex">
@@ -46,9 +49,15 @@
 						<button id="diminuircart" type="button" class="btn btn-dark diminuiCart">-</button>
 					</a>
 						<h4 class="qntcart" id="#qntcart"><?php echo $exibeCart['quantidade_produto']; ?> </h4>
+					<?php if($quantidadeNoCarrinho < $quantidadeEmEstoque) { ?>
 					<a href="plus.php?id=<?php echo $exibeCart['codigo_produto']; ?>&idUser=<?php echo $id_user; ?>">
 						<button id="aumentarcart" type="button" class="btn btn-dark aumentaCart">+</button>
 					</a>
+					<?php }else{ ?>
+						<a href="#">
+						<button id="aumentarcart" type="button"disabled class="btn btn-dark aumentaCart">+</button>
+					</a>
+					<?php } ?>
 				</div>
 				<div class="col-sm-2 display-flex	">
 					<a href="removeCarrinho.php?id=<?php echo $exibeCart['codigo_produto'];?>&idUser=<?php echo $id_user;?>" class="btn btn-lg btn-block btn-danger ajuste">Remover</a>
