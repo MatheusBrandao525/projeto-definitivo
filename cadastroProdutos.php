@@ -83,19 +83,19 @@ $consultaCat = $cn->query("select * from tbl_categoria");
                             <div class="form-group">
 
                                 <label class="label" for="">Imagem 01</label>
-                                <input type="file" class="slcImagem" accept="image/*" required name="txtcapa">
+                                <input type="file" class="slcImagem" accept="image/*" required name="txtcapa1">
                             </div><!--Formulario-->
 
                             <div class="form-group">
 
                                 <label class="label" for="">Imagem 02</label>
-                                <input type="file" class="slcImagem" accept="image/*" required name="txtcapa">
+                                <input type="file" class="slcImagem" accept="image/*" required name="txtcapa2">
                             </div><!--Formulario-->
 
                             <div class="form-group">
 
                                 <label class="label" for="">Imagem 03</label>
-                                <input type="file" class="slcImagem" accept="image/*" required name="txtcapa">
+                                <input type="file" class="slcImagem" accept="image/*" required name="txtcapa3">
                             </div><!--Formulario-->
                         </div><!-- col-sm-03 -->
                         <div class="col-sm-3">
