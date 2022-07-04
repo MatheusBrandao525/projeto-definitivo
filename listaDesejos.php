@@ -11,17 +11,17 @@ include 'menu-principal.php';
 
             <div class="col-sm-12">
                 <div class="row">
-                    <div class="col-sm-1 col-sm-offset-1">
+                    <div class="col-sm-2">
                         <img src="imgem/" class="img-responsiva">
                     </div>
                     
                     
-                    <div class="col-sm-4 wishNomeProduto">
+                    <div class="col-sm-3 wishNomeProduto">
                         <span>NOME PRODUTO</span>
                     </div>	
                     
                     
-                    <div class="col-sm-2">
+                    <div class="col-sm-2 wishValorProduto">
                         <span>VALOR DO PRODUTO</span>
                     </div>		
             

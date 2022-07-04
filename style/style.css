@@ -849,7 +849,13 @@ lista de desejos
 
 .wishNomeProduto{
     max-width: 300px !important;
-    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.wishValorProduto{
+    display: flex;
+    align-items: center;
 }
 
 .wishNomeProduto span{
@@ -858,6 +864,7 @@ lista de desejos
 
 .botaoAdicionarAoCarrinhoListaDeDesejos{
     width: auto;
+    margin-top: 10px;
 }
 
 .adc-listaDesejos{
@@ -865,6 +872,8 @@ lista de desejos
     font-size: 0.70rem;
     height: auto;
 }
+
+
 
 @media screen and (max-width:1400px) {
     .formularioPesquisa{
