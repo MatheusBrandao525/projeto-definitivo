@@ -92,6 +92,11 @@ a.claselinkS{
     max-height: 70px;
 }
 
+.listaDesejo i{
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
 nav #icon{
     color: white;
     font-size: 30px;
@@ -129,7 +134,7 @@ nav #icon{
 }
 
 .controls{
-    width: 550px;
+    width: auto;
     float: right;
     height: auto;
     margin-top: 20px;
@@ -147,14 +152,24 @@ nav #icon{
 }
 
 .iconesMenuTop a{
-    display: flex;    
+    display: flex;
+    text-decoration: none;
+}
+
+.iconesMenuTop a:hover{
+    color: #79969b;
 }
 
 .alinharAdireita{
     width: 100%;
     float: right;
     display: flex;
+    margin-right: 1rem;
     justify-content: space-around;
+}
+
+.perfil{
+    width: 200px;
 }
 
 #inputpesquisar{
@@ -803,6 +818,7 @@ nav #icon{
 }
 
 .dropdown-header{
+    background: #dbe8ea;
     margin: 12px 0;
     font-size: 1rem;
     padding: 0 !important;

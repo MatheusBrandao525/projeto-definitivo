@@ -40,7 +40,7 @@
 <label class="logo">Minha Loja</label>
 
     <div class="controls">
-                <div class="alinharAdireita">
+        <div class="alinharAdireita">
             <?php if(empty($_SESSION['ID'])) { ?>
                 <div class="perfil iconesMenuTop">
                         <a href="login.php" class="nav-link">
@@ -60,6 +60,12 @@
                     </div><!--perfil-->
                 <?php } ?>
 
+                <div class="listaDesejo iconesMenuTop">
+                    <a href="listaDesejos.php" class="nav-link">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                        <span>Salvos</span>
+                    </a>
+                </div><!--carrinho-->          
 
             
             <div class="carrinho iconesMenuTop">
