@@ -57,6 +57,13 @@ label.logo{
     justify-content: center;
 }
 
+#menu-principal a:hover,button:hover{
+    color: #79969b;
+}
+
+
+
+
 nav ul{
     float: right;
     top: 10px;
@@ -847,9 +854,6 @@ nav #icon{
 }
 
 @media screen and (max-width:1400px) {
-    .dropdown-menu{
-        margin-top: -7px;
-    }
     .formularioPesquisa{
         display: flex;
     }
