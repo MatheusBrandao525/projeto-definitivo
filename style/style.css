@@ -21,7 +21,7 @@
 
 .divdrop{
     position: absolute;
-    background-color:#343a40;
+    background-color:#000030;
     z-index: 999;
     color: white;
     display: none;
@@ -38,7 +38,7 @@ a{
 nav,#menu-principal, #menu-top{
     height: 80px;
     width: 100%;
-    background-color:#343a40;
+    background-color:#000030;
     max-height: 80px;
 }
 
@@ -128,7 +128,15 @@ nav #icon{
 
 .navConta{
     width: 100%;
-    background: #343a40;
+    background: #000030;
+}
+
+#produtos{
+    padding-top: 20px;
+}
+
+.cardProdutos{
+    margin-bottom: 20px;
 }
 
 .clear{
@@ -205,11 +213,6 @@ nav #icon{
     padding: 0 15px;
 }
 
-/* .imgPrincipal{
-    width: 550px;
-    height: 550px !important;
-    padding: 10px 30px;
-} */
 
 .pesquisar{
     width: 100%;
@@ -225,10 +228,17 @@ nav #icon{
 }
 
 .slider{
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
     background-color: slategray; 
-    height: auto; 
+    height: 480px; 
     padding-top: 15px;
     padding-bottom: 4px;
+    background-image: url('../imgem/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 5100;
 }
 
 .sliderImg{
@@ -644,7 +654,7 @@ nav #icon{
 }
 
 .footer{
-    background-color: #2c2c2c; 
+    background-color: #000030; 
     margin-top: 40px; 
     padding-top: 50px; 
     bottom: 0!important;
@@ -917,7 +927,7 @@ lista de desejos
     }
     .detales{
         margin-top: 1rem;
-        height: 580px;
+        height: auto;
         border-radius: 10px;
         border: 1px solid #2c2c2c;
         display: flex;
@@ -947,6 +957,7 @@ lista de desejos
     }
 
     .formCep{
+        padding-left: 8px;
         border-radius: 5px;
         width: 100%;
     }
@@ -1105,7 +1116,7 @@ lista de desejos
 
     .botaoCategorias{
         width: auto;
-        background: #343a40;
+        background: #000030;
         border: none;
         color: #fff;
         font-size: 1.30rem;

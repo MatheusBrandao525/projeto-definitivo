@@ -1,10 +1,8 @@
-
 <?php
 session_start();
 	// Incluindo arquivos importantes...
 	include 'conexao.php';	
 	include 'menu.php';
-	include 'slider.php';
 	
 ?>
 

@@ -34,10 +34,10 @@
 
 <script src="jquery.mask.js"></script>
 
-    <title>Minha Loja</title>
+    <title>Talisma</title>
 </head>
 <nav id="menu-top">
-<label class="logo">Minha Loja</label>
+<label class="logo">Talisma</label>
 
     <div class="controls">
         <div class="alinharAdireita">
