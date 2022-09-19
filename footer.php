@@ -3,19 +3,19 @@ include 'conexao.php';
 ?>
 
 <footer class="text-center footer">
-
+<p>@ - Todos os direitos reservados: Desenvolvimento por Matheus 2022</p>
 
 <span class="fa fa-facebook" aria-hidden="true" style="font-size: 40px;"></span>
-<span class="fa fa-twitter" aria-hidden="true" style="font-size: 40px; margin-left: 20px;"></span>
-<span class="fa fa-youtube" aria-hidden="true" style="font-size: 40px; margin-left: 20px;"></span>
+<span class="fa fa-twitter" aria-hidden="true"></span>
+<span class="fa fa-youtube" aria-hidden="true"></span>
 <br><br>
 <span class="fa fa-cc-mastercard" aria-hidden="true" style="font-size: 40px; color:cadetblue"></span>
-<span class="fa fa-cc-visa" aria-hidden="true" style="font-size: 40px; margin-left: 20px; color:cadetblue"></span>
-<span class="fa fa-cc-paypal" aria-hidden="true" style="font-size: 40px; margin-left: 20px; color:cadetblue"></span>
-<span class="fa fa-money" aria-hidden="true" style="font-size: 40px; margin-left: 20px; color:cadetblue"></span>
-<span class="fa fa-cc-amex" aria-hidden="true" style="font-size: 40px; margin-left: 20px; color:cadetblue"></span>
+<span class="fa fa-cc-visa" aria-hidden="true"></span>
+<span class="fa fa-cc-paypal" aria-hidden="true"></span>
+<span class="fa fa-money" aria-hidden="true"></span>
+<span class="fa fa-cc-amex" aria-hidden="true"></span>
 
-<p style="margin-top: 250px;margin-bottom:0px;">Site desenvolvido no curso de PHP com MySQL: Desenvolvimento por Matheus</p>
+
 
 </footer>
 <script>

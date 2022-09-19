@@ -233,6 +233,8 @@ nav #icon{
     padding-top: 5px;
     background-color: slategray; 
     height: 480px; 
+    width: 98%;
+    margin-bottom: 20px;
     padding-top: 15px;
     padding-bottom: 4px;
     background-image: url('../imgem/banner.jpg');
@@ -640,11 +642,6 @@ nav #icon{
     align-items: center;
 }
 
-.botaoAdicionarAoCarrinhoListaDeDesejos a{
-    margin-top: 45px;
-}
-
-
 .topAreaUser>a>button{
     width: 100px;
 }
@@ -660,6 +657,16 @@ nav #icon{
     bottom: 0!important;
     min-height: 400px;
     color: aliceblue;
+}
+
+footer>span{
+    font-size: 3rem !important; 
+    margin-left: 20px; 
+    color:cadetblue;
+}
+
+footer > p{
+    margin-bottom:50px;
 }
 
 
@@ -874,13 +881,17 @@ lista de desejos
 
 .botaoAdicionarAoCarrinhoListaDeDesejos{
     width: auto;
-    margin-top: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .adc-listaDesejos{
-    width: 180px !important;
-    font-size: 0.70rem;
+    width: 80px !important;
     height: auto;
+}
+
+.remove-listaDesejos{
+    padding: 12px 6px;
 }
 
 

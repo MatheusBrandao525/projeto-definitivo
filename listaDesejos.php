@@ -32,7 +32,15 @@ include 'menu-principal.php';
                     </div>
             
                     <div class="col-sm-2 botaoAdicionarAoCarrinhoListaDeDesejos">
-                        <a href="" class="btn btn-block btn-success adc-listaDesejos">Adicionar ao carrinho</a>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <a href="" class="btn btn-block btn-danger remove-listaDesejos">Remover</a>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="" class="btn btn-block btn-success adc-listaDesejos"><i class="material-icons"> shopping_cart</i></a>
+                            </div>
+                        </div>
+
                     </div> 
                 </div>
             </div>	

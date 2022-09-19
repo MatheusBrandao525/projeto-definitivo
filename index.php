@@ -27,7 +27,7 @@
 </style>
 
 
-    <div class="container" id="produtos" style="margin-top: 3px;">
+    <div class="container" id="produtos">
         <div class="row text-center">
 
         <?php  while($exibe = $consulta->fetch(PDO::FETCH_ASSOC)) { 
