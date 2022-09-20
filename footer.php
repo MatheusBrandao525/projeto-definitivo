@@ -3,7 +3,7 @@ include 'conexao.php';
 ?>
 
 <footer class="text-center footer">
-<p>@ - Todos os direitos reservados: Desenvolvimento por Matheus 2022</p>
+<p>&reg - Todos os direitos reservados: Desenvolvimento por Matheus 2022</p>
 
 <span class="fa fa-facebook" aria-hidden="true" style="font-size: 40px;"></span>
 <span class="fa fa-twitter" aria-hidden="true"></span>
