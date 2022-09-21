@@ -92,5 +92,3 @@ values(default,'Matheus Felipe', 'Brandão','mafe123silva@gmail.com', 'exagon10'
 
 select * from tbl_usuario;
 
-CREATE USER 'Matheus'@'localhost' IDENTIFIED WITH mysql_native_password BY '1exagon1@';
-grant all privileges on db_loja_def.* to 'Matheus'@'localhost' with grant option;
