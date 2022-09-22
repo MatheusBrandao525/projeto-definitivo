@@ -2,12 +2,11 @@
     session_start();
     
 
-        include 'conexao.php';
-            //include 'menu.php';
-        include 'menu.php';
-        include 'menu_2.php';
-        include 'slider.php';
-        include 'menu-principal.php';
+        require '../admin/conexao.php';
+        require '../app/menu.php';
+        require '../app/menu_2.php';
+        require '../app/slider.php';
+        require '../app/menu-principal.php';
 
         $consulta = $cn->query('select nome_produto, id_produto, imagen_produto, descricao, qnt_estoque, vl_produto  from tbl_produto');
        
