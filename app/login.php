@@ -1,7 +1,7 @@
 <?php
-    include 'conexao.php';
-    include 'menu.php';
-    include 'menu-principal.php';
+    require "../admin/conexao.php"; // incluindo arquivo de conexão.
+    require '../app/menu.php';
+    require '../app/menu-principal.php';
 ?>
 
 
@@ -10,7 +10,7 @@
 <div class="container" >
     <div class="row align-items-center" style="justify-content: center;">
     <div class="" style="width:450px;">
-        <form method="post" action="teste_usuario.php" style="padding-top: 15px;">
+        <form method="post" action="../test/teste_usuario.php" style="padding-top: 15px;">
             <h4 class="text-center">Login de usuário</h4>
             <label for="email">E-mail</label>
             <div class="form-group">
@@ -26,7 +26,7 @@
 					<span class="glyphicon glyphicon-pencil"> Entrar</span>
 					
 				</button>
-                <a href="cadastro_cliente.php" style="text-decoration: none;">Ainda não sou cadastrado</a>
+                <a href="../app/cadastro_cliente.php" style="text-decoration: none;">Ainda não sou cadastrado</a>
 
         </form>
     </div>
@@ -40,5 +40,5 @@
 
 
 <?php
-    include 'footer.php';
+    require '../app/footer.php';
 ?>

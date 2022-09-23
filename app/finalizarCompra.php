@@ -2,7 +2,7 @@
 
     session_start();
 
-    include 'conexao.php';
+    require "../admin/conexao.php"; // incluindo arquivo de conexão.
 
     $data = date('Y-m-d');
     $ticket = uniqid();
@@ -17,4 +17,4 @@
         $inserir = $cn->query("INSERT INTO tbl_venda (no_ticket, id_usuario, id_produto, nome_produto, qnt_produto, vlr_produto, dt_venda) VALUES ('$ticket','$id_usuario','$id','$nomeProd','$qnt','$preco','$data')");
     } 
 
-    include 'fim.php';
+    require '../app/fim.php';

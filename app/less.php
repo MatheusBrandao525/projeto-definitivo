@@ -8,7 +8,7 @@
 	}
 
 	
-	include 'conexao.php';
+    require "../admin/conexao.php"; // incluindo arquivo de conexão.
 	
 	// verificando se o codigo do produto NÃO está vazio
 	$codigoUsuario = $_GET['idUser'];
@@ -27,13 +27,13 @@
  			if($quantidadeNocarrinho >1){
 				$diminui = $cn->query("UPDATE tbl_carrinho SET quantidade_produto = quantidade_produto -1 WHERE codigo_usuario = '$codigoUsuario' AND codigo_produto = '$codigoProduto';");
 
-				header('location:carrinho.php');
+				header('location:../app/carrinho.php');
 				exit();
 
 			}else if($quantidadeNocarrinho <2){
 				$exclui = $cn->query("DELETE FROM tbl_carrinho WHERE codigo_usuario ='$codigoUsuario' AND codigo_produto = '$codigoProduto'");
 
- 				header('location:carrinho.php');
+ 				header('location:../app/carrinho.php');
 				exit();
 			}
 		} 

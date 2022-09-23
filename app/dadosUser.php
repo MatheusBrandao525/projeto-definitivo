@@ -1,8 +1,8 @@
 <?php 
     session_start();
- include 'conexao.php';
- include 'menu.php';
- include 'menu-usuario.php';
+    require "../admin/conexao.php"; // incluindo arquivo de conexão.
+    require '../app/menu.php';
+    require '../app/menu-usuario.php';
 
  $consulta= $cn->query('SELECT nome_usuario,sobrenome, ds_email,ds_senha, ds_status, ds_endereco ,ds_cidade,no_cep FROM  tbl_usuario');
  $exibeDadosUser = $consulta->fetch(PDO::FETCH_ASSOC);
@@ -49,7 +49,7 @@
 				
 				<h2 class="text-center">Altere seus dados</h2>
 				
-				<form method="post" action="alteraDadosUsuario.php" name="logon">
+				<form method="post" action="../admin/alteraDadosUsuario.php" name="logon">
 
                 <div class="separaFormModal">
 					<div class="form-group">
@@ -134,4 +134,6 @@
 
 <?php
 
-include 'footer.php';
+require '../app/footer.php';
+
+?>

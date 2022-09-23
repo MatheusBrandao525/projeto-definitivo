@@ -3,12 +3,12 @@
 	session_start(); 
 	if(empty($_SESSION['ID'])){
 		
-		header('location:login.php');
+		header('location:../app/login.php');
 		
 	}
 
 	
-	include 'conexao.php';
+    require "../admin/conexao.php"; // incluindo arquivo de conexão.
 
 
 	// verificando se o codigo do produto NÃO está vazio
@@ -31,7 +31,7 @@
 	if($consultaQuantidade->rowCount()>0){
  			if($quantidadeNocarrinho >=1 && $quantidadeNocarrinho < $quantidadeEmEstoque){
 				$diminui = $cn->query("UPDATE tbl_carrinho SET quantidade_produto = quantidade_produto +1 WHERE codigo_usuario = '$codigoUsuario' AND codigo_produto = '$codigoProduto';");
-				header('location:carrinho.php');
+				header('location:../app/carrinho.php');
 				exit();
 			}elseif($quantidadeNocarrinho == $quantidadeEmEstoque){
 /* 				header('location:carrinho.php');

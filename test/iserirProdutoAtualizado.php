@@ -4,10 +4,10 @@
     session_start();
 
     if(empty($_SESSION['Status']) || $_SESSION['Status'] != 1) {
-        header('location:index.php');
+        header('location:../public/index.php');
     }
-    include 'conexao.php'; // incluidndo o arquivo de conexao com o banco de dados...
-    include 'resize-class.php'; // incluindo arquivo para redimensionar a imagem...
+    require '../admin/conexao.php'; // incluidndo o arquivo de conexao com o banco de dados...
+    require '../admin/resize-class.php'; // incluindo arquivo para redimensionar a imagem...
 
     $id_produtoAlt = $_GET['id_altera'];
 
@@ -32,7 +32,7 @@
     $imagemCapa = $_FILES['txtcapa']; // Recebe a imagem selecionada no campo imagem capa...
 
 
-    $destino = 'imgem/'; // Envia as imagens para a pasta imgem...
+    $destino = '../public/assets/imgem/'; // Envia as imagens para a pasta imgem...
 
     // Gerando nome aleatorio para imagem
     // preg_match vai pegar imagens nas extensões jpg|jpeg|png|gif
@@ -74,7 +74,7 @@
 
     }
 
-    header("location:admin.php");
+    header("location:../admin/admin.php");
 
     }catch(PDOException $e) { // Se não exploda um erro na tela...
         echo $e->getMessage();

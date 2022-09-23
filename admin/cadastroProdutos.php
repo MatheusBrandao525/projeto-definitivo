@@ -5,8 +5,8 @@ if(empty($_SESSION['Status']) || $_SESSION['Status'] != 1) {
     header('location:index.php');
 }
 
-include 'conexao.php';
-include 'menu.php';
+require '../admin/conexao.php';
+require '../app/menu.php';
 
 
 $consultaCat = $cn->query("select * from tbl_categoria");
@@ -37,7 +37,7 @@ $consultaCat = $cn->query("select * from tbl_categoria");
             </div><!--tituloForm-->
 
             <div class="formulario_produto w100">
-                <form action="validaForm.php" class="w100" method="post" enctype="multipart/form-data">
+                <form action="../test/validaForm.php" class="w100" method="post" enctype="multipart/form-data">
                     <div class="row w100 frmCadastroProd">
                         <div class="col-sm-3">
                             <div class="form-group">
@@ -132,7 +132,7 @@ $consultaCat = $cn->query("select * from tbl_categoria");
                                     </a>
                                 </div>
                                 <div class="btnVoltar">
-                                    <a href="admin.php" class="btn btn-lg btn-danger btn-block">Voltar</a>
+                                    <a href="../admin/admin.php" class="btn btn-lg btn-danger btn-block">Voltar</a>
                                 </div><!--btnVoltar-->
                             </div><!--btns-->
                             <div class="erros">
@@ -150,6 +150,6 @@ $consultaCat = $cn->query("select * from tbl_categoria");
 
 <?php 
 
-include 'footer.php';
+require '../app/footer.php';
 
 ?>

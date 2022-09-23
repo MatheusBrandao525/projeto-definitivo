@@ -5,8 +5,8 @@
     if(empty($_SESSION['Status']) || $_SESSION['Status'] != 1) {
         header('location:index.php');
     }
-    include 'conexao.php'; // incluidndo o arquivo de conexao com o banco de dados...
-    include 'resize-class.php'; // incluindo arquivo para redimensionar a imagem...
+    require '../admin/conexao.php'; // incluidndo o arquivo de conexao com o banco de dados...
+    require '../app/resize-class.php'; // incluindo arquivo para redimensionar a imagem...
 
     $consulta = $cn->query('select * from tbl_produto');
     $exibe = $consulta->fetch(PDO::FETCH_ASSOC);
@@ -29,7 +29,7 @@
     $imagemCapa = $_FILES['txtcapa']; // Recebe a imagem selecionada no campo imagem capa...
 
 
-    $destino = 'imgem/'; // Envia as imagens para a pasta imgem...
+    $destino = '../public/assets/imgem/'; // Envia as imagens para a pasta imgem...
 
     // Gerando nome aleatorio para imagem
     // preg_match vai pegar imagens nas extensões jpg|jpeg|png|gif
@@ -53,7 +53,7 @@
     $resizeObj = new resize($destino.$img_nome);
     $resizeObj -> resizeImage(450, 550, 'crop');
     $resizeObj -> saveImage($destino.$img_nome, 100);
-    header('location:index.php');
+    header('location:../public/index.php');
 
     }catch(PDOException $e) { // Se não exploda um erro na tela...
         echo $e->getMessage();

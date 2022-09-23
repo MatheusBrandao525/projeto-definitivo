@@ -8,7 +8,7 @@
         header('location:login.php');
     }
 	
-	include 'conexao.php';	
+    require "../admin/conexao.php"; // incluindo arquivo de conexão.
 	include 'menu.php';
 
 	$id_usuario = $_SESSION['ID'];

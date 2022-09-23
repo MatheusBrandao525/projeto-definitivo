@@ -1,6 +1,5 @@
 <?php
-    //include "cabecalho.html";
-    include "conexao.php";
+    require "../admin/conexao.php"; // incluindo arquivo de conexão.
 ?>
 <!--<div class="container-fluid manusUser">-->
 <div class="limpa"></div>

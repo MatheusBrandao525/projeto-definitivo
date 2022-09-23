@@ -1,8 +1,8 @@
 <?php
 
-include 'conexao.php';
-include 'menu.php';
-include 'menu-principal.php';
+require "../admin/conexao.php"; // incluindo arquivo de conexão.
+require '../app/menu.php';
+require '../app/menu-principal.php';
 
 ?>
 

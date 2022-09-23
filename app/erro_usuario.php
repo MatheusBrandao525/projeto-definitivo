@@ -1,7 +1,7 @@
 <?php 
 
-    include 'menu.php';
-    include 'menu-principal.php';
+    require '../app/menu.php';
+    require '../app/menu-principal.php';
 ?>
 
 
@@ -9,7 +9,7 @@
     <div>
         <h3 class="tituloErro">Usuario ja cadastrado!</h3>
         <div>
-            <a href="login.php">
+            <a href="../app/login.php">
                 <button type="submit" class="btn btn-sm btn-default" style="border:0.5px solid; width:250px; font-size:18px; margin:20px 0;">
                                 
                                 <span class="glyphicon glyphicon-pencil"> Fazer login</span>
@@ -24,6 +24,6 @@
 
 <?php 
 
-    include 'footer.php';
+    require '../app/footer.php';
 
 ?>

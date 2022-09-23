@@ -2,7 +2,7 @@
 
     session_start();
 
-    include 'conexao.php';
+    require "../admin/conexao.php"; // incluindo arquivo de conexão.
 
     if(empty($_SESSION['ID'])){
         // Se o usuario não estiver logado então redirecione-o para a pagina de login...
@@ -35,13 +35,13 @@
         $inserirCart = $cn->query("INSERT INTO tbl_carrinho(codigo_produto, codigo_usuario,quantidade_produto, vlr_produto) 
         VALUES ('$codigoProd','$codigoUser','$quantidade','$preco')");
         
-        header('location:index.php'); 
+        header('location:../public/index.php#produtos'); 
         exit();
         }else{
             $atualizaQuantidade = $cn->query("
                 update tbl_carrinho set quantidade_produto = quantidade_produto + '$quantidade' where codigo_produto = '$codigoProd' and codigo_usuario ='$codigoUser'
             ");
-            header('location:index.php');
+            header('location:../public/index.php');
             exit();
 
         }

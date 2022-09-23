@@ -4,11 +4,11 @@
     // Usando a session ID para verificar se o usuario está logado...
     if(empty($_SESSION['ID'])){
         // Se o usuario não estiver logado então redirecione-o para a pagina de login...
-        header('location:login.php');
+        header('location:../app/login.php');
     }
 
-    include 'conexao.php';
-    include 'menu.php';
+    require "../admin/conexao.php"; // incluindo arquivo de conexão.
+    require '../app/menu.php';
 
     $id_user = $_SESSION['ID'];
 	
@@ -36,7 +36,7 @@
 	?>
 		<div class="row exibeProdutosCarrinho">
 				<div class="col-sm-2 display-flex">
-					<img src="imgem/<?php echo $exibeDadosProduto['imagen_produto']; ?>" class="img-responsiva">
+					<img src="../public/assets/imgem/<?php echo $exibeDadosProduto['imagen_produto']; ?>" class="img-responsiva">
 				</div>
 				<div class="col-sm-3 display-flex">
 					<h5><?php echo $exibeDadosProduto['nome_produto']; ?></h5>
@@ -45,12 +45,12 @@
 					<h5>R$ <?php echo number_format($exibeDadosProduto['vl_produto'],2,',','.'); ?></h5>
 				</div>
 				<div class="col-sm-2 display-flex">
-					<a href="less.php?id=<?php echo $exibeCart['codigo_produto']; ?>&idUser=<?php echo $id_user; ?>">
+					<a href="../app/less.php?id=<?php echo $exibeCart['codigo_produto']; ?>&idUser=<?php echo $id_user; ?>">
 						<button id="diminuircart" type="button" class="btn btn-dark diminuiCart">-</button>
 					</a>
 						<h4 class="qntcart" id="#qntcart"><?php echo $exibeCart['quantidade_produto']; ?> </h4>
 					<?php if($quantidadeNoCarrinho < $quantidadeEmEstoque) { ?>
-					<a href="plus.php?id=<?php echo $exibeCart['codigo_produto']; ?>&idUser=<?php echo $id_user; ?>">
+					<a href="../app/plus.php?id=<?php echo $exibeCart['codigo_produto']; ?>&idUser=<?php echo $id_user; ?>">
 						<button id="aumentarcart" type="button" class="btn btn-dark aumentaCart">+</button>
 					</a>
 					<?php }else{ ?>
@@ -60,7 +60,7 @@
 					<?php } ?>
 				</div>
 				<div class="col-sm-2 display-flex	">
-					<a href="removeCarrinho.php?id=<?php echo $exibeCart['codigo_produto'];?>&idUser=<?php echo $id_user;?>" class="btn btn-lg btn-block btn-danger ajuste">Remover</a>
+					<a href="../app/removeCarrinho.php?id=<?php echo $exibeCart['codigo_produto'];?>&idUser=<?php echo $id_user;?>" class="btn btn-lg btn-block btn-danger ajuste">Remover</a>
 				</div>
 
 		</div>
@@ -90,10 +90,10 @@
 			<p>Total: R$ <?php echo number_format($valorFinal,2,',','.'); ?></p>
 			<div class="botoesCart">
 				<div class="acaoCart">
-					<a href="index.php" class="btn btn-primary" style="margin:8px;">Continuar comprando</a>
+					<a href="../public/index.php#produtos" class="btn btn-primary" style="margin:8px;">Continuar comprando</a>
 
 					<?php /* if(){  */?>
-						<a href="finalizarCompra.php" class="btn btn-success">Finalizar compra</a>
+						<a href="../app/finalizarCompra.php" class="btn btn-success">Finalizar compra</a>
 					<?php /* }  */?>
 				</div>
 			</div>
@@ -104,6 +104,6 @@
 
 <?php 
 
-include 'footer.php'
+	require '../app/footer.php';
 
 ?>

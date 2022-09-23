@@ -5,17 +5,7 @@
 <meta charset="utf-8">
 <title>Minha Loja</title>
 	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!--
-	<!-- Latest compiled and minified CSS --
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<!-- jQuery library --
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-	<!-- Latest compiled JavaScript --
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
--->
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
 	
 </head>
 
@@ -23,10 +13,10 @@
 	
 	<?php
 	
-	include 'conexao.php';
-	include 'menu.php';
-	include	'menu_2.php';
-	include 'menu-principal.php';
+    require "../admin/conexao.php"; // incluindo arquivo de conexão.
+	require '../app/menu.php';
+	require '../app/menu_2.php';
+	require '../app/menu-principal.php';
 	
 	if(empty($_GET['txtBuscar'])) {
 		echo "<html><script>location.href='index.php'</script></html>";
@@ -53,11 +43,11 @@
 
        
 		<div class="col-sm-2 col-xs-offset-right-1" style="padding-top:40px">
-        <a href="detalhes.php?id=<?php echo $exibe['id_produto'];?>" style=" text-decoration:none;">
-        <button class="btn btn-sm btn-block btn-info">		
-		<span class="glyphicon glyphicon-info-sign" style="color: white;"> Detalhes</span>
-		</button>
-        </a>	
+			<a href="../app/detalhes.php?id=<?php echo $exibe['id_produto'];?>" style=" text-decoration:none;">
+				<button class="btn btn-sm btn-block btn-info">		
+					<span class="glyphicon glyphicon-info-sign" style="color: white;"> Detalhes</span>
+				</button>
+			</a>	
 		</div> 
 	
 				
@@ -70,7 +60,7 @@
 </body>
 <?php
 	
-	include 'footer.php';
+	require '../app/footer.php';
 	
-	?>
+?>
 </html>

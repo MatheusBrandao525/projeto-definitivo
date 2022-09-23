@@ -1,7 +1,7 @@
 <?php
     session_start();
-    include 'conexao.php';
-    include 'menu.php';
+    require "../admin/conexao.php"; // incluindo arquivo de conexão.
+    require '../app/menu.php';
 
     $consulta= $cn->query('select nome_usuario, ds_email, ds_status, ds_endereco from  tbl_usuario');
     $exibe = $consulta->fetch(PDO::FETCH_ASSOC);
@@ -12,7 +12,7 @@
     
 
 <div class="conteiner-fluid">
-    <?php include 'menu-usuario.php'; ?>
+    <?php require '../app/menu-usuario.php'; ?>
 </div>
 <div class="conteudo-confi-conta">
 
@@ -27,6 +27,6 @@
 
 
 <?php
-    include 'footer.php';
+    require '../app/footer.php';
 
 ?>

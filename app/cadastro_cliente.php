@@ -1,8 +1,8 @@
 <?php
 session_start();
 	// Incluindo arquivos importantes...
-	include 'conexao.php';	
-	include 'menu.php';
+    require "../admin/conexao.php"; // incluindo arquivo de conexão.
+	require '../app/menu.php';
 	
 ?>
 
@@ -15,7 +15,7 @@ session_start();
 				
 				<h2>Cadastro de novo Cliente</h2>
 				
-				<form method="post" action="inserirusuario.php" name="logon">
+				<form method="post" action="../admin/inserirusuario.php" name="logon">
 				
 					<div class="form-group">
 					
@@ -74,7 +74,7 @@ session_start();
 					<button type="submit" style="background-color:#009694;" class="btn btn-block">Cadastrar</button>
 
 					<!--Caso o usuario tenha entrado por engano ou queira voltar para pagina de login-->
-					<a href="index.php" style="text-decoration:none;"> <button type="button" style="background-color:#E0775A; margin-top:10px;" class="btn btn-block">Voltar</button></a>
+					<a href="../public/index.php" style="text-decoration:none;"> <button type="button" style="background-color:#E0775A; margin-top:10px;" class="btn btn-block">Voltar</button></a>
 					
 				</form><!--Form-->
 							
@@ -94,5 +94,5 @@ session_start();
 	
 	<?php
 		// Incluindo arquivo de Rodapé... 
-		include 'footer.php' 
+		require '../app/footer.php' 
 	?>

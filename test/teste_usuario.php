@@ -1,8 +1,7 @@
 <?php
     session_start(); // Iniciando sessão...
 
-    // Incluido arquivo de conexão com o banco de dados...
-    include 'conexao.php';
+    require "../admin/conexao.php"; // incluindo arquivo de conexão.
 
     // Variaveis que recebem os valores inseridos no formulario de login...
     $Vemail = $_POST['txtemail']; // Variavel que recebe o email do usuario/cliente...
@@ -20,15 +19,15 @@
         if($exibeUsuario['ds_status']==0 ){ 
             $_SESSION['ID'] = $exibeUsuario['id_usuario'];
             $_SESSION['Status']= $exibeUsuario['ds_status'];
-            header('location:index.php');
+            header('location:../public/index.php');
         } else{
             $_SESSION['ID'] = $exibeUsuario['id_usuario'];
             $_SESSION['Status'] = $exibeUsuario['ds_status'] == 1;
-            header('location:index.php');
+            header('location:../public/index.php');
         }
     }else{
         // Caso o usuario não exista no banco de dados redirecione-o para a pagina erro.php...
-        header('location:erro.php');
+        header('location:../app/erro.php');
     }
 
 ?>

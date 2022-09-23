@@ -1,6 +1,6 @@
 <?php
 
-    include 'conexao.php';
+require "../admin/conexao.php"; // incluindo arquivo de conexão.
 
     $consultaCategoria = $cn->query('SELECT * FROM tbl_categoria');
 
@@ -10,13 +10,13 @@
 
 <nav id="menu-principal">
             <ul>
-                <li><a class="claselinkS" href="index.php">Home</a></li> <!--Link que redireciona para o Home-->
-                <li><a class="claselinkS"  href="#produtos">Produtos</a></li> <!--Link que redireciona para os produtos usando scroll-havior.-->
+                <li><a class="claselinkS" href="../public/index.php">Home</a></li> <!--Link que redireciona para o Home-->
+                <li><a class="claselinkS"  href="../public/index.php#produtos">Produtos</a></li> <!--Link que redireciona para os produtos usando scroll-havior.-->
                 <li class="nav-item dropdown"> <!--Menu dropdown para as categorias-->
                     <button class="botaoCategorias dropdown-toggle" onclick="showModalCat()" id="categorias">CATEGORIAS</button>
                 </li>
-                <li><a class="claselinkS"  href="contato.php">Contato</a></li>
-                <li><a class="claselinkS"  href="supote.php">Suporte</a></li>
+                <li><a class="claselinkS"  href="../app/contato.php">Contato</a></li>
+                <li><a class="claselinkS"  href="../app/suporte.php">Suporte</a></li>
             </ul>   
             <label id="icon">
                 <i class="fas fa-bars"></i> <!--Icone de menu hamburguer-->

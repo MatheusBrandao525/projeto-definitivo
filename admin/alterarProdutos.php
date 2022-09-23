@@ -5,8 +5,8 @@ if(empty($_SESSION['Status']) || $_SESSION['Status'] != 1) {
     header('location:index.php');
 }
 
-include 'conexao.php';
-include 'menu.php';
+require '../admin/conexao.php';
+require '../app/menu.php';
 
     $id_prod = $_GET['id'];
     $id_categoria = $_GET['id2'];
@@ -42,7 +42,7 @@ $exibeProd = $consultaProduto->fetch(PDO::FETCH_ASSOC);
             </div><!--tituloForm-->
 
             <div class="formulario_produto">
-                <form action="iserirProdutoAtualizado.php?id_altera=<?php echo $id_prod;?>" method="post" enctype="multipart/form-data">
+                <form action="../test/iserirProdutoAtualizado.php?id_altera=<?php echo $id_prod;?>" method="post" enctype="multipart/form-data">
                     <div class="form-group">
 
                         <label class="label" for="">Nome do Produto</label>
@@ -88,7 +88,7 @@ $exibeProd = $consultaProduto->fetch(PDO::FETCH_ASSOC);
 
                         <label class="label" for="">Imagem do Produto</label>
                         <div class="imagemAltera">
-                        <img src="imgem/<?php echo $exibeProd['imagen_produto'];?>" style="max-width:150px;" alt="">
+                        <img src="../public/assets/imgem/<?php echo $exibeProd['imagen_produto'];?>" style="max-width:150px;" alt="">
                         </div>
                         <input type="file" accept="image/*" name="txtcapa">
                     </div><!--Formulario-->
@@ -97,7 +97,7 @@ $exibeProd = $consultaProduto->fetch(PDO::FETCH_ASSOC);
 
                     <label class="label" for="">Imagem do Produto</label>
                     <div class="imagemAltera">
-                    <img src="imgem/0fbf41786a70e8b5ab7114db4c783237.jpg" style="max-width:150px;" alt="">
+                    <img src="../public/assets/imgem/0fbf41786a70e8b5ab7114db4c783237.jpg" style="max-width:150px;" alt="">
                     </div>
                     <input type="file" accept="image/*" name="txtcapa">
                     </div><!--Formulario-->
@@ -106,9 +106,9 @@ $exibeProd = $consultaProduto->fetch(PDO::FETCH_ASSOC);
 
                     <label class="label" for="">Imagem do Produto</label>
                     <div class="imagemAltera">
-                    <img src="imgem/0fbf41786a70e8b5ab7114db4c783237.jpg" style="max-width:150px;" alt="">
+                    <img src="../public/assets/imgem/0fbf41786a70e8b5ab7114db4c783237.jpg" style="max-width:150px;" alt="">
                     </div>
-                    <input type="file" accept="image/*" name="txtcapa">
+                    <input type="file" accept="../public/assets/image/*" name="txtcapa">
                     </div><!--Formulario-->
 
                     <div class="form-group">
@@ -129,7 +129,7 @@ $exibeProd = $consultaProduto->fetch(PDO::FETCH_ASSOC);
                         <button type="submit" class="btn btn-lg btn-success" name="cadastrar">Salvar</button>
                     </a>
                         <div class="btnVoltar">
-                            <a href="admin.php" class="btn btn-lg btn-danger">Voltar</a>
+                            <a href="../admin/admin.php" class="btn btn-lg btn-danger">Voltar</a>
                         </div><!--btnVoltar-->
                     </div><!--btns-->
                     <div class="erros">
@@ -145,6 +145,6 @@ $exibeProd = $consultaProduto->fetch(PDO::FETCH_ASSOC);
 
 <?php 
 
-include 'footer.php';
+require '../app/footer.php';
 
 ?>

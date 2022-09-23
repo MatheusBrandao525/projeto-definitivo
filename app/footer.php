@@ -1,7 +1,3 @@
-<?php 
-include 'conexao.php';
-?>
-
 <footer class="text-center footer">
 <p>&reg - Todos os direitos reservados: Desenvolvimento por Matheus 2022</p>
 

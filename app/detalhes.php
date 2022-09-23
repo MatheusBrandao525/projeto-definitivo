@@ -1,8 +1,8 @@
 <?php
     session_start();
-        include 'conexao.php';
-        include 'menu.php';
-        include 'menu-principal.php';
+    require "../admin/conexao.php"; // incluindo arquivo de conexão.
+    require '../app/menu.php';
+    require '../app/menu-principal.php';
 
         $id_produto = $_GET['id'];
         
@@ -28,22 +28,22 @@
                         </div>
                     </div>
                     <div class="col-sm-11 displayFlex">
-                        <img class="imgPrincipal" src='imgem/<?php echo $exibe["imagen_produto"]; ?>' alt="">
+                        <img class="imgPrincipal" src='../public/assets/imgem/<?php echo $exibe["imagen_produto"]; ?>' alt="">
                     </div>
                 </div>
                 <div class="displayFlex marginTop">
                     <div class="displayFlex justy">
                         <div class="imgp">
-                            <img class="imgPrincipal" src='imgem/<?php echo $exibe["imagen_produto"]; ?>' alt="">
+                            <img class="imgPrincipal" src='../public/assets/imgem/<?php echo $exibe["imagen_produto"]; ?>' alt="">
                         </div>
                         <div class="imgp">
-                            <img class="imgPrincipal" src='imgem/<?php echo $exibe["imagen_produto"]; ?>' alt="">
+                            <img class="imgPrincipal" src='../public/assets/imgem/<?php echo $exibe["imagen_produto"]; ?>' alt="">
                         </div>
                         <div class="imgp">
-                            <img class="imgPrincipal" src='imgem/<?php echo $exibe["imagen_produto"]; ?>' alt="">
+                            <img class="imgPrincipal" src='../public/assets/imgem/<?php echo $exibe["imagen_produto"]; ?>' alt="">
                         </div>
                         <div class="imgp">
-                            <img class="imgPrincipal" src='imgem/<?php echo $exibe["imagen_produto"]; ?>' alt="">
+                            <img class="imgPrincipal" src='../public/assets/imgem/<?php echo $exibe["imagen_produto"]; ?>' alt="">
                         </div>
                     </div>
                 </div>
@@ -102,25 +102,25 @@
 
                 <?php if(empty($_SESSION['ID'])) { ?>
                         <?php if($exibe['qnt_estoque'] > 0) {?>
-                            <a class="linkdecoration" href="login.php">
+                            <a class="linkdecoration" href="../app/login.php">
                                 <button type="button" class="btn btn-success btn-block btnDetalhes">Adicionar ao Carrinho</button>
                             </a>
-                            <a href="index.php" class="btn btn-danger btn-block voltar btnDetalhes">Voltar</a>
+                            <a href="../public/index.php" class="btn btn-danger btn-block voltar btnDetalhes">Voltar</a>
                         <?php } else { ?>
                             <a class="linkdecoration" href="">
                                 <button type="button" class="btn btn-danger btn-block btnDetalhes" disabled >Produto indisponivel</button>
                             </a>
-                            <a href="index.php" class="btn btn-danger btn-block voltar btnDetalhes">Voltar</a>
+                            <a href="../public/index.php" class="btn btn-danger btn-block voltar btnDetalhes">Voltar</a>
                         <?php } ?>
                     <?php }else { ?>
                         <?php if($exibe['qnt_estoque'] > 0) {?>
-                            <a class="btn btn-success btn-block linkdecoration" href='carrinho.php?id=<?php echo $exibe["id_produto"];?>'>Adicionar ao Carrinho</a>
-                            <a href="index.php" class="btn btn-danger btn-block voltar">Voltar</a>
+                            <a class="btn btn-success btn-block linkdecoration" href='../app/carrinho.php?id=<?php echo $exibe["id_produto"];?>'>Adicionar ao Carrinho</a>
+                            <a href="../public/index.php" class="btn btn-danger btn-block voltar">Voltar</a>
                         <?php } else { ?>
                             <a class="linkdecoration" href="">
                                 <button type="button" class="btn btn-danger btn-block" disabled >Produto indisponivel</button>
                             </a>
-                            <a href="index.php" class="btn btn-danger btn-block voltar">Voltar</a>
+                            <a href="../public/index.php" class="btn btn-danger btn-block voltar">Voltar</a>
                         <?php } ?>
                     <?php } ?>
 
@@ -296,6 +296,6 @@
 
 <?php
 
-include 'footer.php'
+require '../app/footer.php'
 
 ?>
