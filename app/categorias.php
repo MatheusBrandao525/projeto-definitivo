@@ -28,7 +28,9 @@
 
                 <img src='../public/assets/imgem/<?php echo $exibir["imagen_produto"]; ?>' class="card-img-top img-responsive" style="width: 100%;"> <!--Responsavel por exibir a imagem do produto-->
 
-                <h5><b><?php echo mb_strimwidth($exibir['nome_produto'],0,25,'...'); ?></b></h5> <!--Responsavel por exibir o nome do produto-->
+                <h5>
+                    <b><?php echo mb_strimwidth($exibir['nome_produto'],0,25,'...'); ?></b> <!--Responsavel por exibir o nome do produto-->
+                </h5>
 
                 <span style="font-size: 20px; color: rgb(24, 24, 24); font-weight: bolder;">R$ <?php echo number_format($exibir['vl_produto'],2,',','.'); ?></span> <!--Responsavel por exibir o preço do produto-->
                 

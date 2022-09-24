@@ -26,9 +26,15 @@
 	<?php while(  $exibe = $consulta->fetch(PDO::FETCH_ASSOC)) { ?>
 	<div class="row exibebusca" style="margin-top: 15px; padding:0 5%;">
 		
-		<div class="col-sm-1 col-sm-offset-1 imgBuscar"><img src="../public/assets/imgem/<?php echo $exibe['imagen_produto']; ?>" class="img-responsiva"></div>
-		<div class="col-sm-5 nomeBusca"><h4 style="padding-top:40px; padding-left:2%; margin-left:25px;"><?php echo $exibe['nome_produto'];?></h4></div>
-		<div class="col-sm-2 precoBusca"><h4 style="padding-top:40px"> R$ <?php echo number_format($exibe['vl_produto'],2,',','.'); ?></h4></div>
+		<div class="col-sm-1 col-sm-offset-1 imgBuscar">
+			<img src="../public/assets/imgem/<?php echo $exibe['imagen_produto']; ?>" class="img-responsiva">
+		</div>
+		<div class="col-sm-5 nomeBusca">
+			<h4 style="padding-top:40px; padding-left:2%; margin-left:25px;"><?php echo $exibe['nome_produto'];?></h4>
+		</div>
+		<div class="col-sm-2 precoBusca">
+			<h4 style="padding-top:40px"> R$ <?php echo number_format($exibe['vl_produto'],2,',','.'); ?></h4>
+		</div>
 
        
 		<div class="col-sm-2 col-xs-offset-right-1" style="padding-top:40px">
