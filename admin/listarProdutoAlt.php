@@ -6,8 +6,6 @@ if(empty($_SESSION['Status']) || $_SESSION['Status'] != 1) {
     header('location:index.php');
 }
 
-
-require '../admin/conexao.php';
 require '../app/menu.php';
 
 $consulta = $cn->query('select * from tbl_produto');

@@ -7,7 +7,6 @@
         header('location:../app/login.php');
     }
 
-    require "../admin/conexao.php"; // incluindo arquivo de conexão.
     require '../app/menu.php';
 
     $id_user = $_SESSION['ID'];

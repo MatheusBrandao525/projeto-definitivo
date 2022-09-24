@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require "../admin/conexao.php"; // incluindo arquivo de conexão.
+
     require '../app/menu.php';
     require '../app/menu-principal.php';
 

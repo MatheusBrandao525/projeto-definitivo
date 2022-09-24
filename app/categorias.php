@@ -1,6 +1,6 @@
 <?php
     session_start(); // iniciando a sessão.
-    require "../admin/conexao.php"; // incluindo arquivo de conexão.
+
     require '../app/menu.php'; // incluindo um menu.
     require '../app/menu_2.php'; // incluindo o segundo menu.
     require '../app/slider.php'; // incluindo o sistema de slide.

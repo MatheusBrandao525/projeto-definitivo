@@ -1,7 +1,6 @@
 <?php
 session_start();
 	// Incluindo arquivos importantes...
-    require "../admin/conexao.php"; // incluindo arquivo de conexão.
 	require '../app/menu.php';
 	
 ?>

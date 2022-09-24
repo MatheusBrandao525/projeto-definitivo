@@ -1,8 +1,6 @@
 <?php
     session_start();
     
-
-        require '../admin/conexao.php';
         require '../app/menu.php';
         require '../app/menu_2.php';
         require '../app/slider.php';

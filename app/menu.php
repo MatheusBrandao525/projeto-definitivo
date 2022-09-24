@@ -1,5 +1,4 @@
 <?php
-
     require "../admin/conexao.php"; // incluindo arquivo de conexão.
 ?>
 <!DOCTYPE html>

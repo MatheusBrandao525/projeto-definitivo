@@ -5,8 +5,6 @@ session_start();
 if(empty($_SESSION['Status']) || $_SESSION['Status'] != 1) {
     header('location:index.php');
 }
-
-	require "../admin/conexao.php"; // incluindo arquivo de conexão.
 	require '../app/menu.php';
 	
 	if(empty($_GET['txtBuscarAlt'])) {

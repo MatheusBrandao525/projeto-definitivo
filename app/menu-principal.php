@@ -1,10 +1,6 @@
 <?php
 
-require "../admin/conexao.php"; // incluindo arquivo de conexão.
-
     $consultaCategoria = $cn->query('SELECT * FROM tbl_categoria');
-
-    
 
 ?>
 

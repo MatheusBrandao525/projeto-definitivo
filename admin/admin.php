@@ -7,7 +7,6 @@
     }
 
     // Incluindo arquivos importantes...
-    require '../admin/conexao.php';
     require '../app/menu.php';
     require '../app/menu-principal.php';
 

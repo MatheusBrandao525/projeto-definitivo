@@ -5,7 +5,6 @@ if(empty($_SESSION['Status']) || $_SESSION['Status'] != 1) {
     header('location:index.php');
 }
 
-    require '../admin/conexao.php'; // incluinda a conexao com o banco de dados
     require '../app/menu.php';
 
     $ID = $_GET['id']; // variavel que recebe o ID do produto via GET
