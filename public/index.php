@@ -63,7 +63,7 @@
                     <?php } ?>
                 <?php }else { ?>
                     <?php if($exibe['qnt_estoque'] > 0) {?>
-                        <a href="" style="text-decoration:none;">
+                        <a href="#" style="text-decoration:none;">
                             <button type="sibmit" name="add_to_cart" class="btn btn-success btn-block" value="">Adicionar ao Carrinho</button>
                         </a>
                     <?php } else { ?>

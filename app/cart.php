@@ -2,6 +2,7 @@
 
     session_start();
 
+    require "../admin/conexao.php";
 
     if(empty($_SESSION['ID'])){
         // Se o usuario não estiver logado então redirecione-o para a pagina de login...
