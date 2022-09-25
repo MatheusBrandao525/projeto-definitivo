@@ -1,15 +1,15 @@
 <?php
 session_start();
 require '../app/menu.php';
-require '../app/menu-principal.php';
+require '../app/menu-usuario.php';
 
 ?>
 
 
-<div class="row dadosWishList" style="margin: 15px 15px; display: block;">
+<div class="row dadosWishList">
 
             <div class="col-sm-12">
-                <div class="row">
+                <div class="row rowWishList">
                     <div class="col-sm-2">
                         <img src="imgem/" class="img-responsiva">
                     </div>

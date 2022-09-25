@@ -19,10 +19,10 @@ if($_SESSION['Status']==1) {
         <ul>
             <li><a href="../public/index.php"><div class="botaovoltarUser"><button class="btn btn-lg btn-danger">Voltar</button></div></a></li>
             <li><a href="../admin/admin.php"><strong>Painel administrativo</strong></a></li>
-            <li><a href="../admin/dadosUser.php"><strong>meus dados</strong></a></li>
+            <li><a href="../app/dadosUser.php"><strong>meus dados</strong></a></li>
             <li><a href="../admin/areaUser.php"><strong>minhas compras</strong></a></li>
             <li><a href="../app/listaDesejos.php"><strong>lista de desejos</strong></a></li>
-            <li><a href=""><strong>suporte</strong></a></li>
+            <li><a href="../app/suporte.php"><strong>suporte</strong></a></li>
         </ul>
     </nav>
 </div>

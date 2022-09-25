@@ -8,7 +8,7 @@
 
     // Incluindo arquivos importantes...
     require '../app/menu.php';
-    require '../app/menu-principal.php';
+    require '../app/menu-usuario.php';
 
     //Criar um menu que exibe "Bem vindo [Nome do ADM]!"
     $consulta = $cn->query('select * from tbl_usuario');
@@ -20,6 +20,20 @@
             <div class="olaadm">
                 <span class="nomeAdm">Olá seja bem vindo <?php echo $exibe['nome_usuario']; ?>!</span>
             </div>
+            <div class="painelDeControle">
+                <a href="../admin/cadastroProdutos.php" class="btn btn-lg btn-primary botoesAdm">Cadastrar Produtos <i class="fas fa-plus"></i></a>
+
+                <a href="../admin/listarProdutoAlt.php" class="btn btn-lg btn-info botoesAdm">Alterar Produtos <i class="fas fa-edit"></i></a>
+
+                <a href="../admin/indiceVendas.php" class="btn btn-lg btn-success botoesAdm">Vendas <i class="fas fa-chart-line"></i></a>
+
+                <a href="../admin/mostraClientes.php" class="btn btn-lg btn-secondary botoesAdm">Clientes <i class="fas fa-address-book"></i></a>
+
+                <a href="../app/suporte.php" class="btn btn-lg btn-dark botoesAdm">Supote <i class="fas fa-question"></i></a>
+                
+                <a href="../app/config_conta.php" class="btn btn-lg btn-warning botoesAdm">Voltar <i class="fas fa-undo-alt"></i></a>
+            </div><!--Painel de controle-->
+
             <div class="painelDeControle">
                 <a href="../admin/cadastroProdutos.php" class="btn btn-lg btn-primary botoesAdm">Cadastrar Produtos <i class="fas fa-plus"></i></a>
 

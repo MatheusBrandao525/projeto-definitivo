@@ -19,7 +19,7 @@
 	
 <div class="container alturaAreaUser">
 	<div class="topAreaUser">
-			<a href="config_conta.php">
+			<a href="../app/config_conta.php">
 				<button class="btn btn-lg btn-danger">Voltar</button>
 			</a>
 	</div>
@@ -53,6 +53,6 @@
 	
 <?php
 	
-	include 'footer.php';
+	require '../app/footer.php';
 	
 ?>

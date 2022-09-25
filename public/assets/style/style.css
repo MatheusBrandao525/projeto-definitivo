@@ -315,14 +315,19 @@ nav #icon{
 }
 
 .painelDeControle{
-    width: 400px;
-    display: inline-block;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     margin-top: 25px;
 }
 
 .botoesAdm{
-    width: 100%;
+    width: 120px;
+    height: 100px;
+    display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 10px;
     text-decoration: none;
 }
@@ -720,6 +725,11 @@ footer > p{
     margin-top: 1rem;
 }
 
+.rowWishList{
+    padding: 2% 2%;
+}
+
+
 .itensListaDesejos{
     background: #17a2b8;
     width: 100%;
@@ -899,7 +909,7 @@ lista de desejos
 }
 
 .botaoAdicionarAoCarrinhoListaDeDesejos{
-    width: auto;
+    width: 100%;
     display: flex;
     align-items: center;
 }
