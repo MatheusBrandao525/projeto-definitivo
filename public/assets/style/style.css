@@ -676,7 +676,6 @@ _________________________________________
 
 .footer{
     background-color: #000030; 
-    margin-top: 40px; 
     padding-top: 50px; 
     bottom: 0!important;
     min-height: 400px;
@@ -695,31 +694,177 @@ footer > p{
 
 
 /* 
-    Inicio da area do modal
+    Inicio da area Indice de Vendas
 */
-.modal{
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    display: flex;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 199;
-    align-items: center;
-    justify-content: center;
-   transform: scale(1.1);
-    opacity: 0;
-    visibility: hidden;
-    transition: visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+
+.conteudo-indice-vendas{
+
 }
 
-.maisUmaDiv{
+.row-indice-vendas{
+    margin:  0 !important;
+    display: flex;
+}
+
+.sidbar-indice-vendas{
+    top: 0;
+    left: 0;
+    color: #fff;
+    width: 20%;
+    height: 480px;
+    background-color: #000030;
+}
+
+
+.sidbar-indice-vendas p{
+    width: 100% !important;
+    padding-left: 5%;
+    font-size: 1.30rem;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin: 0 !important;
+
+}
+
+.sidbar-indice-vendas p:hover{
+    background-color: #fff;
+    color: #000030;
+    transition: 0.2s;
+}
+
+.dados-indice-vendas{
+    width: 80%;
+    height: 100%;
+    margin: 0 !important;
+}
+
+.barra-indice-vendas{
+    display: flex;
+    width: 100%;
+}
+
+.barra-indice-vendas h3{
+    width: 20%;
+    padding: 10px;
+}
+
+.filtrar-indices{
+    width: 80%;
+}
+
+.btn-indice{
+    width: 150px;
+    height: 40px;
+    background-color: #fff;
+    float: right;
+    right: 5;
+    margin-top: 10px;
+}
+
+.btn-indice:hover{
+    background-color: #dbe8ea;
+}
+
+.mostrar-indices{
+    display: flex;
+}
+
+.mostra-indices-01{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+.box-indice-ultimas-vendas{
+    width: 500px;
+    height: 350px;
     background-color: aliceblue;
     border-radius: 10px;
-    padding: 5px 5px;
+    box-shadow: 0.125em 0.175em 0 0.275em rgba(0, 0, 0, 0.125);
 }
+
+.box-indice-ultimas-vendas h5{
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 5px;
+    height: 40px;
+    border-bottom: 1px solid #000030;
+}
+
+.titulo-dados{
+    border-bottom: 1px solid #000030;
+}
+
+.indice-dados{
+    width: 100%;
+    display: flex;
+    margin: 0 !important;
+    justify-content: space-between;
+    font-size: 10px !important;
+}
+
+.espaco-inferior{
+    margin-bottom: 5px !important;
+}
+
+.numero-venda{
+    max-width: 50px !important;
+}
+
+.dados-venda{
+    max-width: 125px !important ;
+}
+
+.mostra-indices-02{
+    width: 200px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-indice-lucro{
+    margin-bottom: 40px;
+}
+
+.box-indice-lucro h5,.box-indice-grafico h5{
+    padding: 10px 0  10px 10px ;
+    border-bottom: 1px solid #000030;
+}
+
+.indice-lucro,.indice-resumo{
+    padding-top: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.indice-lucro h4{
+    color: #38c258;
+    font-weight: bold;
+}
+
+.box-indice-lucro,.box-indice-grafico{
+    width: 300px;
+    border-radius: 10px;
+    height: 150px;
+    background-color: #dbe8ea;
+    box-shadow: 0.125em 0.175em 0 0.275em rgba(0, 0, 0, 0.125);
+}
+
+/* 
+    Fim da Pagina Indice de vendas
+
+    ############################################
+    ____________________________________________
+
+
+    Inicio da Pagina de lista de desejos
+
+
+*/
 
 .h3listaDesejos{
     margin-top: 1rem;
@@ -760,33 +905,39 @@ footer > p{
     background-image: url(imgem/relogio.jpg);
 }
 
-.separaFormModal{
-    display: flex;
-    justify-content: space-evenly;
-}
+/* Final da lista de desejos
+###########################################################
+___________________________________________________________
 
-.maisUmaDiv form>.separaFormModal>.form-group>input{
-    width: 180px;
-}
-
-
-.maisUmaDiv form>.separaFormModal>.form-group>textarea{
-    width: 550px;
-}
-
-.show-modal{
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1.0);
-}
-
-
-
- /* 
     
-    Inbicio da area modal categorias
+    Inbicio da area modals
   
 */
+
+.modal{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 199;
+    align-items: center;
+    justify-content: center;
+   transform: scale(1.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.maisUmaDiv{
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 5px 5px;
+}
+
 .modalCategorias{
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -884,6 +1035,26 @@ footer > p{
 .fechaModal i:hover{
     color: rgb(185, 86, 105);
 
+}
+
+.separaFormModal{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.maisUmaDiv form>.separaFormModal>.form-group>input{
+    width: 180px;
+}
+
+
+.maisUmaDiv form>.separaFormModal>.form-group>textarea{
+    width: 550px;
+}
+
+.show-modal{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
 }
 
 

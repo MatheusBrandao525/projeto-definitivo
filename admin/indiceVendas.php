@@ -1,5 +1,105 @@
-<!--
+<?php
+    session_start();
+    require '../app/menu.php';
 
-Criar uma pagina para  exibir todas as vendas realizadas na plataforma...
+    $consulta= $cn->query('select nome_usuario, ds_email, ds_status, ds_endereco from  tbl_usuario');
+    $exibe = $consulta->fetch(PDO::FETCH_ASSOC);
+    $exibeUsuario = $consulta->fetch(PDO::FETCH_ASSOC);
 
--->
+?>
+<body>
+    
+
+<div class="conteiner-fluid">
+    <?php require '../app/menu-usuario.php'; ?>
+</div>
+<div class="conteudo-indice-vendas">
+    <div class="row row-indice-vendas">
+        <div class="col-sm-03 sidbar-indice-vendas">
+            <p>Vendas</p>
+            <p>Grafico de vendas</p>
+            <p>Produtos mais vendidos</p>
+            <p>Produtos mais buscados</p>
+        </div><!-- sidbar-indice-vendas -->
+
+        <div class="col-sm-9 dados-indice-vendas scroll_vertical">
+            <div class="barra-indice-vendas">
+                <h3>Vendas</h3>
+                <div class="filtrar-indices">
+                    <button class="btn btn-lg btn-default btn-indice">Filtros </button>
+                    <div class="limpa"></div>
+                </div><!-- filtrar-indices -->
+            </div><!-- barra-indice-vendas -->
+            <div class="row mostrar-indices">
+                <div class="col-sm-7 mostra-indices-01">
+                    <div class="box-indice-ultimas-vendas">
+                        <div class="titlo-indice">
+                            <h5>Ultimas vendas realizadas</h5>
+                        </div><!-- titlo-indice -->
+
+                        <div class="row indice-dados espaco-inferior">
+                            <div class="col-sm-2 dados-venda numero-venda">
+                                <span class="titulo-dados">Nº Venda</span>
+                            </div>
+                            <div class="col-sm-4 dados-venda">
+                                <span class="titulo-dados">Tiket</span>
+                            </div><div class="col-sm-4 dados-venda">
+                                <span class="titulo-dados">Cliente</span>
+                            </div><div class="col-sm-2 dados-venda">
+                                <span class="titulo-dados">Valor</span>
+                            </div> 
+                        </div><!-- indice-dados -->
+
+                        
+                        <div class="row indice-dados">
+                            <div class="col-sm-2 dados-venda numero-venda">
+                                <span>Nº 06776</span>
+                            </div>
+                            <div class="col-sm-4 dados-venda">
+                                <a href="#"><span>jk88a78w7hd7a89wu</span></a>
+                            </div><div class="col-sm-4 dados-venda">
+                                <span>Fulano01</span>
+                            </div><div class="col-sm-2 dados-venda">
+                                <span>R$ 250,00</span>
+                            </div> 
+                        </div><!-- indice-dados -->
+                        
+                    </div><!-- box-indice-ultimas-vendas -->
+                </div><!-- mostra-indices-01 -->
+
+                <div class="col-sm-5 mostra-indices-02">
+                    <div class="centro-indice">
+                        <div class="box-indice-lucro">
+                            <h5>Seu lucro</h5>
+                            <div class="indice-lucro">
+                                <h4>R$ 99.999,00</h4>
+                            </div>
+                        </div><!-- box-indice-lucro -->
+
+                        <div class="box-indice-grafico">
+                            <h5>Resumo</h5>
+                            <div class="indice-resumo">
+                                <h4>10.736 Vendas <i class="fas fa-chart-line"></i></h4>
+                            </div>
+                        </div><!-- box-indice-grafico -->
+                    </div><!-- centro-indice -->
+
+                </div><!-- mostra-indices-02 -->
+            </div><!-- mostrar-indices -->
+        </div><!-- dados-indice-vendas -->
+    </div><!-- row-indice-vendas -->
+
+</div><!-- conteudo-indice-vendas -->
+
+</body>
+
+
+
+
+
+
+
+<?php
+    require '../app/footer.php';
+
+?>
