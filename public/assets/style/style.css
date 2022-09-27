@@ -697,10 +697,6 @@ footer > p{
     Inicio da area Indice de Vendas
 */
 
-.conteudo-indice-vendas{
-
-}
-
 .row-indice-vendas{
     margin:  0 !important;
     display: flex;
@@ -745,12 +741,12 @@ footer > p{
 }
 
 .barra-indice-vendas h3{
-    width: 20%;
+    width: 30%;
     padding: 10px;
 }
 
 .filtrar-indices{
-    width: 80%;
+    width: 70%;
 }
 
 .btn-indice{
@@ -768,6 +764,26 @@ footer > p{
 
 .mostrar-indices{
     display: flex;
+}
+
+.mostrar-grafico{
+    width: 100%;
+}
+
+.mostra-grafico-01{
+    width: 90%;
+}
+
+.mostra-grafico-02{
+    width: 10%;
+}
+
+.box-grafico{
+    width: 800px;
+    height: 350px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0.125em 0.175em 0 0.275em rgba(0, 0, 0, 0.125);
 }
 
 .mostra-indices-01{
@@ -854,6 +870,9 @@ footer > p{
     box-shadow: 0.125em 0.175em 0 0.275em rgba(0, 0, 0, 0.125);
 }
 
+
+
+
 /* 
     Fim da Pagina Indice de vendas
 
@@ -914,6 +933,18 @@ ___________________________________________________________
   
 */
 
+.modalIndice,.modalGrafico,.modalMaisVendido,.modalMaisPesquisado{
+    position: fixed;
+    transform: scale(0.0);
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.0s ease-in-out, transform 0.0s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.modalIndice,.modalGrafico,.modalMaisVendido,.modalMaisPesquisado h3{
+    width: auto;
+}
+
 .modal{
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -929,7 +960,7 @@ ___________________________________________________________
    transform: scale(1.1);
     opacity: 0;
     visibility: hidden;
-    transition: visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    transition: visibility 0.05s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
 }
 
 .maisUmaDiv{
@@ -957,9 +988,10 @@ ___________________________________________________________
 }
 
 .show-modal{
+    position: unset;
     opacity: 1;
     visibility: visible;
-    transform: scale(1.0);
+    transform: scale(0.0);
 }
 
 .conteudoModalCategorias{

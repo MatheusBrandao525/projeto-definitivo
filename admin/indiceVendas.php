@@ -16,13 +16,13 @@
 <div class="conteudo-indice-vendas">
     <div class="row row-indice-vendas">
         <div class="col-sm-03 sidbar-indice-vendas">
-            <p>Vendas</p>
-            <p>Grafico de vendas</p>
-            <p>Produtos mais vendidos</p>
-            <p>Produtos mais buscados</p>
+            <p onclick="showModalIndice();hideModalGrafico();hideModalMaisVendido();hideModalMaisPesquisado()">Vendas</p>
+            <p onclick="hideModalIndice(); showModalGrafico();hideModalMaisVendido();hideModalMaisPesquisado()">Grafico de vendas</p>
+            <p onclick="hideModalGrafico(); showModalMaisVendido();hideModalIndice();hideModalMaisPesquisado()">Produtos mais vendidos</p>
+            <p onclick="hideModalMaisVendido(); showModalMaisPesquisado();hideModalIndice();hideModalGrafico()">Produtos mais buscados</p>
         </div><!-- sidbar-indice-vendas -->
 
-        <div class="col-sm-9 dados-indice-vendas scroll_vertical">
+        <div class="col-sm-9 dados-indice-vendas modalIndice" id="modal-indice">
             <div class="barra-indice-vendas">
                 <h3>Vendas</h3>
                 <div class="filtrar-indices">
@@ -87,6 +87,213 @@
                 </div><!-- mostra-indices-02 -->
             </div><!-- mostrar-indices -->
         </div><!-- dados-indice-vendas -->
+
+
+        <div class="col-sm-9 dados-indice-vendas modalGrafico" id="modal-grafico">
+            <div class="barra-indice-vendas">
+                <h3>Gráfico</h3>
+                <div class="filtrar-indices">
+                    <button class="btn btn-lg btn-default btn-indice">Filtros </button>
+                    <div class="limpa"></div>
+                </div><!-- filtrar-indices -->
+            </div><!-- barra-indice-vendas -->
+            <div class="row mostrar-grafico">
+                <div class="col-sm-10 mostra-grafico-01">
+                    <div class="box-grafico">
+                        <div class="titlo-indice">
+                            <h5>Ultimas vendas realizadas</h5>
+                        </div><!-- titlo-indice -->
+
+                        <div class="row indice-dados espaco-inferior">
+                            <div class="col-sm-2 dados-venda numero-venda">
+                                <span class="titulo-dados">Nº Venda</span>
+                            </div>
+                            <div class="col-sm-4 dados-venda">
+                                <span class="titulo-dados">Tiket</span>
+                            </div><div class="col-sm-4 dados-venda">
+                                <span class="titulo-dados">Cliente</span>
+                            </div><div class="col-sm-2 dados-venda">
+                                <span class="titulo-dados">Valor</span>
+                            </div> 
+                        </div><!-- indice-dados -->
+
+                        
+                        <div class="row indice-dados">
+                            <div class="col-sm-2 dados-venda numero-venda">
+                                <span>Nº 06776</span>
+                            </div>
+                            <div class="col-sm-4 dados-venda">
+                                <a href="#"><span>jk88a78w7hd7a89wu</span></a>
+                            </div><div class="col-sm-4 dados-venda">
+                                <span>Fulano01</span>
+                            </div><div class="col-sm-2 dados-venda">
+                                <span>R$ 250,00</span>
+                            </div> 
+                        </div><!-- indice-dados -->
+                        
+                    </div><!-- box-indice-ultimas-vendas -->
+                </div><!-- mostra-indices-01 -->
+
+                <div class="col-sm-2 mostra-grafico-02">
+                    <div class="centro-indice">
+                        <div class="box-indice-lucro">
+                            <h5>Seu lucro</h5>
+                            <div class="indice-lucro">
+                                <h4>R$ 99.999,00</h4>
+                            </div>
+                        </div><!-- box-indice-lucro -->
+
+                        <div class="box-indice-grafico">
+                            <h5>Resumo</h5>
+                            <div class="indice-resumo">
+                                <h4>10.736 Vendas <i class="fas fa-chart-line"></i></h4>
+                            </div>
+                        </div><!-- box-indice-grafico -->
+                    </div><!-- centro-indice -->
+
+                </div><!-- mostra-indices-02 -->
+            </div><!-- mostrar-indices -->
+        </div><!-- dados-indice-vendas -->
+
+
+
+        <div class="col-sm-9 dados-indice-vendas modalMaisVendido" id="modal-mais-vendido">
+            <div class="barra-indice-vendas">
+                <h3>Mais vendidos</h3>
+                <div class="filtrar-indices">
+                    <button class="btn btn-lg btn-default btn-indice">Filtros </button>
+                    <div class="limpa"></div>
+                </div><!-- filtrar-indices -->
+            </div><!-- barra-indice-vendas -->
+            <div class="row mostrar-indices">
+                <div class="col-sm-7 mostra-indices-01">
+                    <div class="box-indice-ultimas-vendas">
+                        <div class="titlo-indice">
+                            <h5>Ultimas vendas realizadas</h5>
+                        </div><!-- titlo-indice -->
+
+                        <div class="row indice-dados espaco-inferior">
+                            <div class="col-sm-2 dados-venda numero-venda">
+                                <span class="titulo-dados">Nº Venda</span>
+                            </div>
+                            <div class="col-sm-4 dados-venda">
+                                <span class="titulo-dados">Tiket</span>
+                            </div><div class="col-sm-4 dados-venda">
+                                <span class="titulo-dados">Cliente</span>
+                            </div><div class="col-sm-2 dados-venda">
+                                <span class="titulo-dados">Valor</span>
+                            </div> 
+                        </div><!-- indice-dados -->
+
+                        
+                        <div class="row indice-dados">
+                            <div class="col-sm-2 dados-venda numero-venda">
+                                <span>Nº 06776</span>
+                            </div>
+                            <div class="col-sm-4 dados-venda">
+                                <a href="#"><span>jk88a78w7hd7a89wu</span></a>
+                            </div><div class="col-sm-4 dados-venda">
+                                <span>Fulano01</span>
+                            </div><div class="col-sm-2 dados-venda">
+                                <span>R$ 250,00</span>
+                            </div> 
+                        </div><!-- indice-dados -->
+                        
+                    </div><!-- box-indice-ultimas-vendas -->
+                </div><!-- mostra-indices-01 -->
+
+                <div class="col-sm-5 mostra-indices-02">
+                    <div class="centro-indice">
+                        <div class="box-indice-lucro">
+                            <h5>Seu lucro</h5>
+                            <div class="indice-lucro">
+                                <h4>R$ 99.999,00</h4>
+                            </div>
+                        </div><!-- box-indice-lucro -->
+
+                        <div class="box-indice-grafico">
+                            <h5>Resumo</h5>
+                            <div class="indice-resumo">
+                                <h4>10.736 Vendas <i class="fas fa-chart-line"></i></h4>
+                            </div>
+                        </div><!-- box-indice-grafico -->
+                    </div><!-- centro-indice -->
+
+                </div><!-- mostra-indices-02 -->
+            </div><!-- mostrar-indices -->
+        </div><!-- dados-indice-vendas -->
+
+
+
+
+        <div class="col-sm-9 dados-indice-vendas modalMaisPesquisado" id="modal-mais-pesquisado">
+            <div class="barra-indice-vendas">
+                <h3>Mais buscados</h3>
+                <div class="filtrar-indices">
+                    <button class="btn btn-lg btn-default btn-indice">Filtros </button>
+                    <div class="limpa"></div>
+                </div><!-- filtrar-indices -->
+            </div><!-- barra-indice-vendas -->
+            <div class="row mostrar-indices">
+                <div class="col-sm-7 mostra-indices-01">
+                    <div class="box-indice-ultimas-vendas">
+                        <div class="titlo-indice">
+                            <h5>Ultimas vendas realizadas</h5>
+                        </div><!-- titlo-indice -->
+
+                        <div class="row indice-dados espaco-inferior">
+                            <div class="col-sm-2 dados-venda numero-venda">
+                                <span class="titulo-dados">Nº Venda</span>
+                            </div>
+                            <div class="col-sm-4 dados-venda">
+                                <span class="titulo-dados">Tiket</span>
+                            </div><div class="col-sm-4 dados-venda">
+                                <span class="titulo-dados">Cliente</span>
+                            </div><div class="col-sm-2 dados-venda">
+                                <span class="titulo-dados">Valor</span>
+                            </div> 
+                        </div><!-- indice-dados -->
+
+                        
+                        <div class="row indice-dados">
+                            <div class="col-sm-2 dados-venda numero-venda">
+                                <span>Nº 06776</span>
+                            </div>
+                            <div class="col-sm-4 dados-venda">
+                                <a href="#"><span>jk88a78w7hd7a89wu</span></a>
+                            </div><div class="col-sm-4 dados-venda">
+                                <span>Fulano01</span>
+                            </div><div class="col-sm-2 dados-venda">
+                                <span>R$ 250,00</span>
+                            </div> 
+                        </div><!-- indice-dados -->
+                        
+                    </div><!-- box-indice-ultimas-vendas -->
+                </div><!-- mostra-indices-01 -->
+
+                <div class="col-sm-5 mostra-indices-02">
+                    <div class="centro-indice">
+                        <div class="box-indice-lucro">
+                            <h5>Seu lucro</h5>
+                            <div class="indice-lucro">
+                                <h4>R$ 99.999,00</h4>
+                            </div>
+                        </div><!-- box-indice-lucro -->
+
+                        <div class="box-indice-grafico">
+                            <h5>Resumo</h5>
+                            <div class="indice-resumo">
+                                <h4>10.736 Vendas <i class="fas fa-chart-line"></i></h4>
+                            </div>
+                        </div><!-- box-indice-grafico -->
+                    </div><!-- centro-indice -->
+
+                </div><!-- mostra-indices-02 -->
+            </div><!-- mostrar-indices -->
+        </div><!-- dados-indice-vendas -->
+
+
+
     </div><!-- row-indice-vendas -->
 
 </div><!-- conteudo-indice-vendas -->

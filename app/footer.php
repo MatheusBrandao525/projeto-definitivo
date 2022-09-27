@@ -48,4 +48,45 @@ function hideModalCat(){
     element.classList.remove("show-modal");
 }
 
+function showModalIndice(){
+    var element = document.getElementById("modal-indice");
+    element.classList.add("show-modal");
+}
+
+function hideModalIndice(){
+    var element = document.getElementById("modal-indice");
+    element.classList.remove("show-modal");
+}
+
+function showModalGrafico(){
+    var element = document.getElementById("modal-grafico");
+    element.classList.add("show-modal");
+}
+
+function hideModalGrafico(){
+    var element = document.getElementById("modal-grafico");
+    element.classList.remove("show-modal");
+}
+
+function showModalMaisVendido(){
+    var element = document.getElementById("modal-mais-vendido");
+    element.classList.add("show-modal");
+}
+
+function hideModalMaisVendido(){
+    var element = document.getElementById("modal-mais-vendido");
+    element.classList.remove("show-modal");
+}
+
+function showModalMaisPesquisado(){
+    var element = document.getElementById("modal-mais-pesquisado");
+    element.classList.add("show-modal");
+}
+
+function hideModalMaisPesquisado(){
+    var element = document.getElementById("modal-mais-pesquisado");
+    element.classList.remove("show-modal");
+}
+
+
 </script>   
