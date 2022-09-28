@@ -778,6 +778,15 @@ footer > p{
     width: 10%;
 }
 
+.box-grafico02,.box-grafico01{
+    border-radius: 10px;
+    width: 200px;
+    max-width: 150px;
+    background-color: #dbe8ea;
+    box-shadow: 0.125em 0.175em 0 0.275em rgba(0, 0, 0, 0.125);
+}
+
+
 .box-grafico{
     width: 800px;
     height: 350px;
@@ -802,7 +811,7 @@ footer > p{
     box-shadow: 0.125em 0.175em 0 0.275em rgba(0, 0, 0, 0.125);
 }
 
-.box-indice-ultimas-vendas h5{
+.box-indice-ultimas-vendas h5,.titlo-grafico h5{
     width: 100%;
     padding-left: 20px;
     padding-top: 5px;
@@ -834,6 +843,10 @@ footer > p{
     max-width: 125px !important ;
 }
 
+.dados-mais-vendido,.dados-mais-buscado{
+    text-align: center;
+}
+
 .mostra-indices-02{
     width: 200px;
     height: 400px;
@@ -846,18 +859,23 @@ footer > p{
     margin-bottom: 40px;
 }
 
-.box-indice-lucro h5,.box-indice-grafico h5{
+.box-indice-lucro h5,.box-indice-grafico h5,.box-grafico02 h5,.box-grafico01 h5{
     padding: 10px 0  10px 10px ;
     border-bottom: 1px solid #000030;
 }
 
-.indice-lucro,.indice-resumo{
-    padding-top: 2rem;
+.indice-lucro,.indice-resumo,.grafico-atual,.grafico-anterior{
+    padding: 1rem 0;
     width: 100%;
     text-align: center;
 }
 
-.indice-lucro h4{
+.grafico-atual{
+    margin-bottom: 40px;
+}
+
+
+.grafico-atual,.indice-lucro h4{
     color: #38c258;
     font-weight: bold;
 }
