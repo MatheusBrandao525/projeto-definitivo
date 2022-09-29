@@ -946,6 +946,45 @@ footer > p{
 ###########################################################
 ___________________________________________________________
 
+    Inicio da Area de Clientes
+
+*/
+
+.paginaClientes{
+    height: 100%; 
+    padding-bottom:5px;
+}
+
+.exibeBuscaCliente{
+    margin-top: 15px; 
+    padding:0 5%;
+}
+
+.botoesCliente{
+    padding-top:40px;
+}
+
+.botoesCliente a{
+    text-decoration:none;
+}
+
+.botoesCliente a> span{
+    color: white;
+}
+
+.nomeCliente h4{
+    padding-top:40px; 
+    padding-left:2%; 
+    margin-left:25px;
+}
+
+.emailCliente{
+    padding-top:40px;
+}
+
+
+
+/*
     
     Inbicio da area modals
   

@@ -27,7 +27,7 @@
 
                 <a href="../admin/indiceVendas.php" class="btn btn-lg btn-success botoesAdm">Vendas <i class="fas fa-chart-line"></i></a>
 
-                <a href="../admin/mostraClientes.php" class="btn btn-lg btn-secondary botoesAdm">Clientes <i class="fas fa-address-book"></i></a>
+                <a href="../admin/clientes.php" class="btn btn-lg btn-secondary botoesAdm">Clientes <i class="fas fa-address-book"></i></a>
 
                 <a href="../app/suporte.php" class="btn btn-lg btn-dark botoesAdm">Supote <i class="fas fa-question"></i></a>
                 
