@@ -91,9 +91,9 @@
 				<div class="acaoCart">
 					<a href="../public/index.php#produtos" class="btn btn-primary" style="margin:8px;">Continuar comprando</a>
 
-					<?php /* if(){  */?>
+					<?php  if($total != 0){  ?>
 						<a href="../app/finalizarCompra.php" class="btn btn-success">Finalizar compra</a>
-					<?php /* }  */?>
+					<?php } ?>
 				</div>
 			</div>
 		</div>
