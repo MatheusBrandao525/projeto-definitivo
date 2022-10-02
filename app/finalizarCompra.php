@@ -1,6 +1,12 @@
 <?php 
 
-    session_start();
+    session_start(); // Iniciando a Sessão...
+    // Usando a session ID para verificar se o usuario está logado...
+    if(empty($_SESSION['ID'])){
+        // Se o usuario não estiver logado então redirecione-o para a pagina de login...
+        header('location:../app/login.php');
+    }
+
 
     require "../admin/conexao.php"; // incluindo arquivo de conexão.
 
@@ -8,7 +14,10 @@
     $ticket = uniqid();
     $id_usuario = $_SESSION['ID'];
 
-    foreach($_SESSION['carrinho'] as $id =>$qnt){
+    $verificaCart = $cn->query("SELECT * FROM tbl_carrinho WHERE codigo_usuario = '$id_usuario'");
+    $verifica = $verificaCart->fetch(PDO::FETCH_ASSOC);
+
+    foreach($verifica as $id =>$qnt){
         $consulta = $cn->query("SELECT vl_produto, nome_produto FROM tbl_produto WHERE id_produto = '$id'");
         $exibe = $consulta->fetch(PDO::FETCH_ASSOC);
         $nomeProd = $exibe['nome_produto'];

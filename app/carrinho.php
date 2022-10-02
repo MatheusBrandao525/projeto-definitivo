@@ -92,7 +92,7 @@
 					<a href="../public/index.php#produtos" class="btn btn-primary" style="margin:8px;">Continuar comprando</a>
 
 					<?php  if($total != 0){  ?>
-						<a href="../app/finalizarCompra.php" class="btn btn-success">Finalizar compra</a>
+						<a href="../app/finalizarCompra.php?idCart=<?php ?>" class="btn btn-success">Finalizar compra</a>
 					<?php } ?>
 				</div>
 			</div>
