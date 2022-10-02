@@ -58,7 +58,7 @@
 					</a>
 					<?php } ?>
 				</div>
-				<div class="col-sm-2 display-flex	">
+				<div class="col-sm-2 display-flex">
 					<a href="../app/removeCarrinho.php?id=<?php echo $exibeCart['codigo_produto'];?>&idUser=<?php echo $id_user;?>" class="btn btn-lg btn-block btn-danger ajuste">Remover</a>
 				</div>
 
@@ -81,6 +81,9 @@
 
 		$valorFinal = $total + $frete;
 
+		$consultaCarrinho = $cn->query("SELECT * FROM tbl_carrinho WHERE codigo_usuario = '$id_user'");
+
+		$exibeCarrinho = $consultaCarrinho->fetch(PDO::FETCH_ASSOC);
 	?>
 		<h3 class="text-center">Informações do carrinho</h3>
 		<div class="infoCarrinho">
@@ -92,7 +95,7 @@
 					<a href="../public/index.php#produtos" class="btn btn-primary" style="margin:8px;">Continuar comprando</a>
 
 					<?php  if($total != 0){  ?>
-						<a href="../app/finalizarCompra.php?idCart=<?php ?>" class="btn btn-success">Finalizar compra</a>
+						<a href="../app/finalizarCompra.php?idCart=<?php echo $exibeCarrinho['id_carrinho']; ?>&valorCart=<?php echo $valorFinal; ?>" class="btn btn-success">Finalizar compra</a>
 					<?php } ?>
 				</div>
 			</div>
