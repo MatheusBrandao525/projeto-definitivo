@@ -35,7 +35,7 @@
             </div><!--Painel de controle-->
 
             <div class="painelDeControle">
-                <a href="../admin/cadastroProdutos.php" class="btn btn-lg btn-primary botoesAdm">Cadastrar Produtos <i class="fas fa-plus"></i></a>
+                <a href="../admin/gerenciarPedidos.php" class="btn btn-lg btn-primary botoesAdm">Gerenciar Pedidos <i class="fas fa-truck"></i></a>
 
                 <a href="../admin/listarProdutoAlt.php" class="btn btn-lg btn-info botoesAdm">Alterar Produtos <i class="fas fa-edit"></i></a>
 
