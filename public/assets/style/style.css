@@ -501,6 +501,10 @@ _________________________________________
     font-weight: 700;
 }
 
+.botoesAdm i {
+    margin-left: 5px;
+}
+
 .containnerCart{
     padding-left: 0 !important;
     padding-right: 0 !important;
